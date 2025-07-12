@@ -79,7 +79,13 @@
         NewPass: NewPass {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp SPACE &kp BACKSPACE &kp LS(T) &kp A &kp K &kp A &kp HASH &kp KP_NUMBER_0 &kp KP_NUMBER_5 &kp KP_NUMBER_2 &kp KP_NUMBER_2 &kp ENTER>;
+            bindings =
+                <&none &kp SPACE>,
+                <&macro_wait_time 1000>,
+                <&macro_release>,
+                <&macro_tap>,
+                <&kp BACKSPACE &kp LS(T) &kp A &kp K &kp A &kp HASH &kp KP_NUMBER_0 &kp KP_NUMBER_5 &kp KP_NUMBER_2 &kp KP_NUMBER_2 &kp ENTER>;
+
             label = "NEWPASS";
             wait-ms = <30>;
             tap-ms = <30>;
