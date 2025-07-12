@@ -82,7 +82,7 @@
             bindings =
                 <&none &kp SPACE>,
                 <&macro_wait_time 300>,
-                <&kp BACKSPACE &kp LS(T) &kp A &kp K &kp A &kp HASH &kp KP_NUMBER_0 &kp KP_NUMBER_5 &kp KP_NUMBER_2 &kp KP_NUMBER_2 &kp ENTER>;
+                <&kp BACKSPACE &kp LS(T) &kp A &kp K &kp A &kp HASH &kp NUMBER_0 &kp NUMBER_5 &kp NUMBER_2 &kp NUMBER_2 &kp ENTER>;
 
             label = "NEWPASS";
             wait-ms = <30>;
