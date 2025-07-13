@@ -110,7 +110,7 @@
             // 追加: スクロールのタップ時間を設定 (20ms)
 
             tap-ms = <20>;
-         };
+        };
     };
 
     keymap {
@@ -124,7 +124,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 4 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 LC(SPACE)      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
         FUNCTION {
