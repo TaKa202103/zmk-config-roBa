@@ -141,7 +141,7 @@
             bindings = <
 &mt ESC Q         &kp W         &kp E         &kp R                        &kp T                                                       &kp Y        &kp U  &lt 5 I    &kp O    &lt 5 P
 &lt 4 A           &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                   &kp MINUS      &kp H        &kp J  &kp K      &kp L    &lt 6 SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &mt ESC TAB                     &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &mt TILDE TAB                   &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 4 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 LC(SPACE)      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
             >;
 
@@ -156,6 +156,8 @@
 &kp BACKSLASH  &kp TILDE      &kp CARET        &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp INT_YEN      &kp F11  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
 &kp PIPE       &kp DOLLAR     &kp COLON        &trans                &trans                 &trans           &trans   &trans                          &kp F12
             >;
+
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
         NUM {
