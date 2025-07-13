@@ -56,7 +56,7 @@
 
         IME {
             bindings = <&kp LC(SPACE)>;
-            key-positions = <34 38>;
+            key-positions = <38 22>;
             layers = <0>;
         };
     };
