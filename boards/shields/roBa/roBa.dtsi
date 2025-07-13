@@ -98,7 +98,7 @@
         compatible = "alps,ec11";
         a-gpios = <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <12>;
+        steps = <24>;
         status = "disabled";
     };
 
@@ -111,13 +111,6 @@
         sensors = <&left_encoder &right_encoder>;
         triggers-per-rotation = <10>;
     };
-    &sensor0 {
-        compatible = "zmk,sensor-rotate";
-        label = "ENC1";
-        io-channels = <&adc 0>;
-        rotation-behavior = <&scroll_up_down>;
-    };
-
 
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
