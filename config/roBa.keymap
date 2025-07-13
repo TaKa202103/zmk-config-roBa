@@ -111,12 +111,25 @@
             #binding-cells = <0>;
             bindings =
                 <&none>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_0>,
-                <&macro_press>,
-                <&kp LC(KP_NUMBER_0)>;
+                <&macro_tap_time 50>,
+                <&kp KP_NUMBER_0 &kp LC(KP_NUMBER_0)>;
 
             label = "DOUBL_00";
+        };
+
+        Win_right: Win_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&none>,
+                <&macro_press>,
+                <&kp LEFT_WIN>,
+                <&macro_tap>,
+                <&kp RIGHT>,
+                <&macro_release>,
+                <&kp LEFT_WIN &kp RIGHT>;
+
+            label = "WIN_RIGHT";
         };
     };
 
@@ -177,7 +190,7 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE        &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                                         &kp LG(UP_ARROW)    &kp LG(LEFT)            &kp UP_ARROW    &kp LG(RIGHT)            &kp ESC
+&kp ESCAPE        &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                                         &kp LG(UP_ARROW)    &kp LG(LEFT)            &kp UP_ARROW    &Win_right               &kp ESC
 &kp HOME          &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END         &trans            &kp HOME     &kp LG(DOWN_ARROW)  &kp LEFT                &kp DOWN_ARROW  &kp RIGHT                &kp END
 &kp LEFT_SHIFT    &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &kp LEFT_SHIFT  &kp LEFT_WIN      &kp LA(TAB)  &trans              &kp LG(LS(LEFT_ARROW))  &trans          &kp LS(LG(RIGHT_ARROW))  &trans
 &kp LEFT_CONTROL  &kp LEFT_WIN            &trans          &trans                   &trans          &trans            &trans       &trans                                                                               &trans
