@@ -98,7 +98,7 @@
             #binding-cells = <0>;
             bindings =
                 <&none &kp SPACE>,
-                <&macro_wait_time 300>,
+                <&macro_wait_time 100>,
                 <&kp BACKSPACE &kp LS(T) &kp A &kp K &kp A &kp HASH &kp NUMBER_0 &kp NUMBER_5 &kp NUMBER_2 &kp NUMBER_2 &kp ENTER>;
 
             label = "NEWPASS";
@@ -109,7 +109,13 @@
         Doubl_00: Doubl_00 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LC(KP_NUMBER_0) &kp KP_NUMBER_0>;
+            bindings =
+                <&none>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_0>,
+                <&macro_press>,
+                <&kp LC(KP_NUMBER_0)>;
+
             label = "DOUBL_00";
         };
     };
