@@ -3,22 +3,18 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-// #includeのあとのあたりにスクロール量を変更
-
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
 
-//  behaviors に追加
-// 新しいスクロール動作の追加
+behaviors {
+    scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+         compatible = "zmk,behavior-sensor-rotate";
+         #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_DOEN>, <&msc SCRL_UP>;
 
-scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-    compatible = "zmk,behavior-sensor-rotate";
-    #sensor-binding-cells = <0>;
-    bindings = <&msc SCRL_DOEN>, <&msc SCRL_UP>;
+         // 追加: スクロールのタップ時間を設定 (20ms)
 
-    // 追加: スクロールのタップ時間を設定 (20ms)
-
-    tap-ms = <20>;
-};
+        tap-ms = <20>;
+    };
 
 // 設定したいレイヤー
 
