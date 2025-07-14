@@ -120,7 +120,7 @@
                 <&kp KP_NUMBER_0>,
                 <&macro_release>,
                 <&macro_press>,
-                <&kp LC(KP_NUMBER_0)>,
+                <&kp KP_NUMBER_0>,
                 <&macro_release>;
 
             label = "DOUBL_00";
