@@ -155,6 +155,21 @@
 
             label = "WIN_LEFT";
         };
+
+        Printscreen: Printscreen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&none>,
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp PRINTSCREEN>,
+                <&macro_release>,
+                <&kp LEFT_ALT &kp PRINTSCREEN>;
+
+            label = "PRINTSCREEN";
+        };
     };
 
     behaviors {
@@ -214,10 +229,10 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE        &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &kp LA(PRINTSCREEN)                                 &kp LG(UP_ARROW)    &Win_left               &kp UP_ARROW    &Win_right               &kp ESC
-&kp HOME          &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END              &kp LA(F4)        &kp HOME     &kp LG(DOWN_ARROW)  &kp LEFT                &kp DOWN_ARROW  &kp RIGHT                &kp END
-&kp LEFT_SHIFT    &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &kp LEFT_SHIFT       &kp LEFT_ALT      &kp LA(TAB)  &kp LG(E)           &kp LG(LS(LEFT_ARROW))  &trans          &kp LS(LG(RIGHT_ARROW))  &kp LC(W)
-&kp LEFT_CONTROL  &kp LEFT_WIN            &trans          &trans                   &trans               &trans            &Win_left    &Win_right                                                                           &trans
+&kp ESCAPE        &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &Printscreen                                   &kp LG(UP_ARROW)    &Win_left               &kp UP_ARROW    &Win_right               &kp ESC
+&kp HOME          &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END         &kp LA(F4)        &kp HOME     &kp LG(DOWN_ARROW)  &kp LEFT                &kp DOWN_ARROW  &kp RIGHT                &kp END
+&kp LEFT_SHIFT    &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &kp LEFT_SHIFT  &kp LEFT_ALT      &kp LA(TAB)  &kp LG(E)           &kp LG(LS(LEFT_ARROW))  &trans          &kp LS(LG(RIGHT_ARROW))  &kp LC(W)
+&kp LEFT_CONTROL  &kp LEFT_WIN            &trans          &trans                   &trans          &trans            &Win_left    &Win_right                                                                           &trans
             >;
 
             sensor-bindings = <&encoder_msc_up_down>;
