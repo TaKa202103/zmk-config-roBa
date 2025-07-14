@@ -111,8 +111,12 @@
             #binding-cells = <0>;
             bindings =
                 <&none>,
-                <&macro_tap_time 50>,
-                <&kp KP_NUMBER_0 &kp LC(KP_NUMBER_0)>;
+                <&macro_tap>,
+                <&kp KP_NUMBER_0>,
+                <&macro_release>,
+                <&macro_press>,
+                <&kp LC(KP_NUMBER_0)>,
+                <&macro_release>;
 
             label = "DOUBL_00";
         };
@@ -173,7 +177,7 @@
 
         default_layer {
             bindings = <
-&mt ESC Q         &kp W         &kp E         &kp R                        &kp T                                                       &kp Y        &kp U  &lt 5 I    &kp O    &lt 5 P
+&mt ESC Q         &kp W         &kp E         &kp R                        &kp T                                                       &kp Y        &kp U  &lt 5 I    &lt 5 O  &lt 5 P
 &lt 4 A           &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                   &kp MINUS      &kp H        &kp J  &kp K      &kp L    &lt 6 SQT
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &mt TILDE TAB                   &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 4 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 LC(SPACE)      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
@@ -186,8 +190,8 @@
         FUNCTION {
             bindings = <
 &kp QMARK      &kp AMPERSAND  &kp PERCENT      &kp LEFT_BRACKET      &kp RIGHT_BRACKET                                &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&kp AT_SIGN    &kp HASH       &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER        &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&kp BACKSLASH  &kp TILDE      &kp CARET        &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp INT_YEN      &kp F11  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
+&kp AT_SIGN    &kp HASH       &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER        &kp F11  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+&kp BACKSLASH  &kp TILDE      &kp CARET        &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp INT_YEN      &kp F8   &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
 &kp PIPE       &kp DOLLAR     &kp COLON        &trans                &trans                 &trans           &trans   &trans                          &kp F12
             >;
 
@@ -196,18 +200,18 @@
 
         NUM {
             bindings = <
-&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                   &kp PLUS      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS
-&kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp SLASH
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &kp EQUAL       &kp PERIOD    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0
-&Doubl_00                   &trans           &trans           &trans           &trans        &trans                       &trans          &trans                                                           &Doubl_00
+&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                      &kp PLUS      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS
+&kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp LS(LA(MINUS))  &kp ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp SLASH
+&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp COMMA                    &kp EQUAL          &kp PERIOD    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0
+&Doubl_00                   &trans           &trans           &trans           &trans        &trans                       &trans             &trans                                                           &Doubl_00
             >;
         };
 
         ARROW {
             bindings = <
-&kp ESCAPE        &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                                         &kp LG(UP_ARROW)    &Win_left               &kp UP_ARROW    &Win_right               &kp ESC
-&kp HOME          &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END         &trans            &kp HOME     &kp LG(DOWN_ARROW)  &kp LEFT                &kp DOWN_ARROW  &kp RIGHT                &kp END
-&kp LEFT_SHIFT    &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &kp LEFT_SHIFT  &kp LEFT_WIN      &kp LA(TAB)  &kp LC(W)           &kp LG(LS(LEFT_ARROW))  &trans          &kp LS(LG(RIGHT_ARROW))  &trans
+&kp ESCAPE        &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &kp LC(W)                                      &kp LG(UP_ARROW)    &Win_left               &kp UP_ARROW    &Win_right               &kp ESC
+&kp HOME          &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END         &kp LA(F4)        &kp HOME     &kp LG(DOWN_ARROW)  &kp LEFT                &kp DOWN_ARROW  &kp RIGHT                &kp END
+&kp LEFT_SHIFT    &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &kp LEFT_SHIFT  &kp LEFT_ALT      &kp LA(TAB)  &kp LC(W)           &kp LG(LS(LEFT_ARROW))  &trans          &kp LS(LG(RIGHT_ARROW))  &kp LC(W)
 &kp LEFT_CONTROL  &kp LEFT_WIN            &trans          &trans                   &trans          &trans            &Win_left    &Win_right                                                                           &trans
             >;
 
