@@ -114,15 +114,7 @@
         Doubl_00: Doubl_00 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&none>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_0>,
-                <&macro_release>,
-                <&macro_press>,
-                <&kp KP_NUMBER_0>,
-                <&macro_release>;
-
+            bindings = <&none &kp KP_NUMBER_0 &kp KP_NUMBER_0>;
             label = "DOUBL_00";
         };
 
