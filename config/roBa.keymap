@@ -21,7 +21,6 @@
     //         <&kp LEFT_ARROW>,
     //         <&kp UP_ARROW>,
     //         <&kp DOWN_ARROW>;
-
     //     tick = <10>;
     //     wait-ms = <5>;
     //     tap-ms = <5>;
@@ -56,7 +55,8 @@
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
         };
- at_sign {
+
+        at_sign {
             bindings = <&kp AT_SIGN>;
             key-positions = <10 11>;
         };
@@ -222,7 +222,7 @@
         };
     };
 
- keymap {
+    keymap {
         compatible = "zmk,keymap";
 
         default_layer {
@@ -244,7 +244,7 @@
 &kp LEFT_CONTROL  &kp LEFT_WIN  &kp LEFT_ALT   &trans                &trans                 &trans           &trans   &trans                                         &kp F12
             >;
 
-            sensor-bindings = <&encoder_msc_up_down>;
+            sensor-bindings = <&inc_dec_kp A B>;
         };
 
         NUM {
