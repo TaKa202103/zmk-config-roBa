@@ -252,6 +252,11 @@
 
              tap-ms = <60>;
         };
+        enc_key_press: enc_key_press {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENC_KEY_PRESS";
+            sensor-bindings = <&kp A>, <&kp B>;
+        };
     };
 
     keymap {
