@@ -27,9 +27,12 @@
 
 &mkp_input_listener { input-processors = <&zip_temp_layer MOUSE 10000>; };
 
-&trackball {
+&trackball_listener {
+    compatible = "zmk,input-listener";
+
     input-processors = <
         &zip_report_rate_limit 15
+    >;
 
     arrows {
         layers = <3>;
@@ -54,7 +57,7 @@
         input-processors =
             <&zip_report_rate_limit 15>,
             <&zip_xy_scaler 3 1>,
-            <&zip_xy_transform 1>,
+            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>>,
             <&zip_xy_to_scroll_mapper>;
 
         process-next;
@@ -75,9 +78,7 @@
 
         };
     };
-};
 
-/ {
     combos {
         compatible = "zmk,combos";
 
