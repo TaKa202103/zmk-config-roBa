@@ -37,7 +37,6 @@
     device = <&trackball>;
     input-processors = <
         &zip_report_rate_limit 15
-        &zip_keybind_keys_custom
     >;
 
     auto-mouse-layer {
@@ -54,6 +53,13 @@
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_to_scroll_mapper>;
 
+        process-next;
+    };
+    layer-2 {
+        layers = <2>;
+        input-processors = <
+            &zip_keybind_keys_custom
+        >;
         process-next;
     };
 };
