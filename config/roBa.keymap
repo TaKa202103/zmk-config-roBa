@@ -70,15 +70,13 @@
 };
 
 / {
-    input-processors {
-        compatible = "zmk,input-processors";
-
-        trackball_input_processor {
-            compatible = "zmk,input-processor-trackball";
-            label = "main_trackball_processor";
-            arrow-layers = <3>;
-            mouse-layers = <4>;
-            scroll-layers = <5>;
+    input_processors {
+        wheel_x_scaler: wheel_x_scaler {
+            compatible = "zmk,input-processor-scaler";
+            #input-processor-cells = <2>;
+            type = <INPUT_EV_REL>;
+            codes = <INPUT_REL_HWHEEL>;
+            track-remainders;
         };
     };
 
