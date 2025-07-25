@@ -40,15 +40,21 @@
         tap-ms = <30>;
     };
 
-    scroll {
-        layers = <5>;
-        bindings =
-            <&msc SCRL_RIGHT>,
-            <&msc SCRL_LEFT>,
-            <&msc SCRL_UP>,
-            <&msc SCRL_DOWN>;
-        tick = <60>;
-        tap-ms = <40>;
+    auto-mouse-layer {
+        layers = <DEFAULT MOUSE>;
+        input-processors = <&zip_temp_layer MOUSE 10000>;
+        process-next;
+    };
+
+    scroller {
+        layers = <ARROW>;
+        input-processors =
+            <&zip_report_rate_limit 15>,
+            <&zip_xy_scaler 3 1>,
+            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
+            <&zip_xy_to_scroll_mapper>;
+
+        process-next;
     };
 };
 
