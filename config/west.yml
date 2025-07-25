@@ -2,6 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: badjeff
+      url-base: https://github.com/badjeff  
     - name: ssbb
       url-base: https://github.com/ssbb
     - name: kumamuk-git
@@ -11,6 +13,10 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    - name: zmk-input-processor-report-rate-limit
+      remote: badjeff
+      revision: main
+      path: modules/zmk-input-processor-report-rate-limit
     - name: zmk-listeners
       remote: ssbb
       revision: v1
