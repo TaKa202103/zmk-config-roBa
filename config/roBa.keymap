@@ -55,7 +55,8 @@
 
         process-next;
     };
-    layer-2 {
+
+    ARROW {
         layers = <2>;
         input-processors = <
             &zip_keybind_keys_custom
@@ -78,12 +79,12 @@
             compatible = "zmk,input-processor-keybind";
             #input-processor-cells = <0>;
             track_remainders;
-            bindings = <&kp RIGHT>,
-                      <&kp LEFT>,
-                      <&kp UP>,
-                      <&kp DOWN>;
-        tick = <60>;
-        wait-ms = <150>;
+            bindings = <&kp RIGHT_ARROW>,
+                       <&kp LEFT_ARROW>,
+                       <&kp UP_ARROW>,
+                       <&kp DOWN_ARROW>;
+        tick = <30>;
+        wait-ms = <30>;
         tap-ms = <30>;
         // mode = <1>
         // threshold = <10>
