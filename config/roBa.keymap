@@ -47,7 +47,7 @@
         layers = <3>;
         input-processors =
             <&zip_report_rate_limit 15>,
-            <&zip_xy_scaler 1 1>,
+            <&zip_xy_scaler 1 3>,
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_to_scroll_mapper>;
 
@@ -71,7 +71,7 @@
 };
 
 &encoder {
-    compatible = "zmk,rotary-encoder";
+    compatible = "zmk,left_encoder";
     bindings = <&inc_dec_kp>;
 
     tick = <4>;  // ← この値を小さくすると感度アップ（反応が早くなる）
