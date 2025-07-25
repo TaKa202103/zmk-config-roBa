@@ -37,7 +37,7 @@
     device = <&trackball>;
     input-processors = <
         &zip_report_rate_limit 15
-        &zip_keybind_keys
+        &zip_keybind_keys_custom
     >;
 
     auto-mouse-layer {
@@ -68,7 +68,7 @@
             track-remainders;
         };
 
-        zip_keybind_keys: zip_keybind_keys {
+        zip_keybind_keys_custom: zip_keybind_keys {
             compatible = "zmk,input-processor-keybind";
             #input-processor-cells = <0>;
             track_remainders;
