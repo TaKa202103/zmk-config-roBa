@@ -33,7 +33,6 @@
 &trackball_listener {
     compatible = "zmk,input-listener";
     device = <&trackball>;
-
     input-processors = <
         &zip_report_rate_limit 15
     >;
@@ -93,11 +92,6 @@
         shift_tab {
             bindings = <&kp LS(TAB)>;
             key-positions = <12 13>;
-        };
-
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
         };
 
         double_quotation {
