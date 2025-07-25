@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 50
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -211,7 +211,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
-            tap-ms = <30>;
+            tap-ms = <20>;
         };
     };
 
