@@ -34,10 +34,10 @@
     scroll {
         layers = <5>;
         bindings =
-            <&msc SCRL_UP>,
-            <&msc SCRL_DOWN>,
             <&msc SCRL_LEFT>,
             <&msc SCRL_RIGHT>;
+            <&msc SCRL_UP>,
+            <&msc SCRL_DOWN>,
         tick = <60>;
         tap-ms = <40>;
     };
