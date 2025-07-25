@@ -56,10 +56,10 @@
         process-next;
     };
 
-    ARROW {
-        layers = <2>;
-        input-processors = <&zip_keybind_keys_custom>;
-        process-next;
+    //ARROW {
+        //layers = <2>;
+        //input-processors = <&zip_keybind_keys_custom>;
+        //process-next;
     };
 };
 
@@ -73,21 +73,21 @@
             track-remainders;
         };
 
-        zip_keybind_keys_custom: zip_keybind_keys {
-            compatible = "zmk,input-processor-keybind";
-            #input-processor-cells = <0>;
-            bindings = <&kp RIGHT_ARROW>,
-                       <&kp LEFT_ARROW>,
-                       <&kp UP_ARROW>,
-                       <&kp DOWN_ARROW>;
-            tick = <20>;
-            wait-ms = <30>;
-            tap-ms = <30>;
-            mode = <1>;
-            threshold = <15>;
-            max_threshold = <200>;
-            max_pending_activations = <8>;
-        };
+        //zip_keybind_keys_custom: zip_keybind_keys {
+            //compatible = "zmk,input-processor-keybind";
+            //#input-processor-cells = <0>;
+            //bindings = <&kp RIGHT_ARROW>,
+                       //<&kp LEFT_ARROW>,
+                       //<&kp UP_ARROW>,
+                       //<&kp DOWN_ARROW>;
+            //tick = <20>;
+            //wait-ms = <30>;
+            //tap-ms = <30>;
+            //mode = <1>;
+            //threshold = <15>;
+            //max_threshold = <200>;
+            //max_pending_activations = <8>;
+        //};
     };
 
     combos {
