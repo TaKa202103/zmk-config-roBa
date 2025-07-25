@@ -58,9 +58,7 @@
 
     ARROW {
         layers = <2>;
-        input-processors = <
-            &zip_keybind_keys_custom
-        >;
+        input-processors = <&zip_keybind_keys_custom>;
         process-next;
     };
 };
