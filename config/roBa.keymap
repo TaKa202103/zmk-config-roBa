@@ -256,7 +256,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENC_KEY_PRESS";
             #sensor-binding-cells = <0>; 
-            sensor-bindings = <&kp A>, <&kp B>;
+            bindings = <&kp A>, <&kp B>;
         };
     };
 
