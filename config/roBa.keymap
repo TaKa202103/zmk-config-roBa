@@ -38,18 +38,6 @@
         &zip_report_rate_limit 15
     >;
 
-    arrows {
-        layers = <3>;
-        bindings =
-            <&kp RIGHT_ARROW>,
-            <&kp LEFT_ARROW>,
-            <&kp UP_ARROW>,
-            <&kp DOWN_ARROW>;
-        tick = <40>;
-        wait-ms = <150>;
-        tap-ms = <30>;
-    };
-
     auto-mouse-layer {
         layers = <0 4>;
         input-processors = <&zip_temp_layer MOUSE 10000>;
@@ -65,6 +53,20 @@
             <&zip_xy_to_scroll_mapper>;
 
         process-next;
+    };
+};
+
+&trackball {
+    arrows {
+        layers = <3>;
+        bindings =
+            <&kp RIGHT_ARROW>,
+            <&kp LEFT_ARROW>,
+            <&kp UP_ARROW>,
+            <&kp DOWN_ARROW>;
+        tick = <40>;
+        wait-ms = <150>;
+        tap-ms = <30>;
     };
 };
 
