@@ -55,7 +55,7 @@
 };
 
 &trackball {
-    arrows {
+    NUM {
         layers = <2>;
         bindings =
             <&kp RIGHT_ARROW>,
