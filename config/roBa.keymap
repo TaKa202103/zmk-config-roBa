@@ -48,7 +48,7 @@
         layers = <3>;
         input-processors =
             <&zip_report_rate_limit 15>,
-            <&zip_xy_scaler 4 2>,
+            <&zip_xy_scaler 1 1>,
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_to_scroll_mapper>;
 
@@ -65,7 +65,7 @@
             <&kp UP_ARROW>,
             <&kp DOWN_ARROW>;
 
-        tick = <40>;
+        tick = <60>;
         wait-ms = <150>;
         tap-ms = <30>;
     };
