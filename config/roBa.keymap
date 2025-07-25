@@ -47,7 +47,7 @@
         layers = <3>;
         input-processors =
             <&zip_report_rate_limit 15>,
-            <&zip_xy_scaler 1 150>,
+            <&zip_xy_scaler 1 80>,
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_to_scroll_mapper>;
 
