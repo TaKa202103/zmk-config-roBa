@@ -267,7 +267,7 @@
             tap-ms = <60>;
         };
 
-        inc_dec_pgupdown: inc_dec_kp {
+        inc_dec_pgupdown: inc_dec_pgupdown {
             compatible = "zmk,behavior-inc-dec-kp";
             bindings = <&kp PAGE_UP>, <&kp PAGE_DOWN>;
         };
