@@ -70,7 +70,7 @@
     };
 };
 
-&encoder {
+encoder: encoder {
     compatible = "zmk,left_encoder";
     bindings = <&inc_dec_kp>;
 
