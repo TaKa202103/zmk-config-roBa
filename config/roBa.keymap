@@ -70,6 +70,14 @@
     };
 };
 
+&encoder {
+    compatible = "zmk,rotary-encoder";
+    bindings = <&inc_dec_kp>;
+
+    tick = <4>;  // ← この値を小さくすると感度アップ（反応が早くなる）
+    acceleration = <1>; // 加速度
+};
+
 / {
     input_processors {
         wheel_x_scaler: wheel_x_scaler {
@@ -258,6 +266,11 @@
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
             tap-ms = <60>;
+        };
+
+        inc_dec_kp: inc_dec_kp {
+            compatible = "zmk,behavior-inc-dec-kp";
+            bindings = <&kp PAGE_UP>, <&kp PAGE_DOWN>;
         };
     };
 
