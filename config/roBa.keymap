@@ -270,7 +270,7 @@
         // inc_dec_pgupdown: inc_dec_pgupdown {
             // compatible = "zmk,behavior-inc-dec-kp";
             // bindings = <&kp PAGE_UP>, <&kp PAGE_DOWN>;
-        }
+            // };
     };
 
     keymap {
