@@ -8,6 +8,8 @@ manifest:
       url-base: https://github.com/badjeff  
     - name: ssbb
       url-base: https://github.com/ssbb
+    - name: zettaface
+      url-base: https://github.com/zettaface
 
   projects:
     # https://github.com/zmkfirmware/zmk
@@ -35,6 +37,10 @@ manifest:
 
     - name: zmk-output-behavior-listener
       remote: badjeff
+      revision: main
+
+    - name: zmk-input-processor-keybind
+      remote: zettaface
       revision: main
 
   self:
