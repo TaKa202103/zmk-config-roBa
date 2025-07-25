@@ -317,7 +317,7 @@
 &kp LEFT_CONTROL  &kp LEFT_WIN            &kp LEFT_ALT    &trans                   &trans          &trans            &Win_left    &Win_right                                                                   &kp LA(F4)
             >;
 
-            ssensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
         MOUSE {
