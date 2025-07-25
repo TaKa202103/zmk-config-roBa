@@ -242,7 +242,7 @@
 
         encoder: encoder {
             compatible = "zmk,left_encoder";
-            bindings = <&my_inc_dec_kp>;
+            bindings = <&inc_dec_kp>;
             tick = <4>;
             acceleration = <1>;
         };
