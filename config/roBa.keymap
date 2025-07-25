@@ -27,9 +27,7 @@
 
 &mkp_input_listener { input-processors = <&zip_temp_layer MOUSE 10000>; };
 
-&trackball_listener {
-    compatible = "zmk,input-listener";
-
+&trackball {
     input-processors = <
         &zip_report_rate_limit 15
 
