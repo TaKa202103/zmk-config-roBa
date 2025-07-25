@@ -11,9 +11,12 @@
 };
 
 / {
-    trackball_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
+    input-processors {
+        compatible = "zmk,input-processors";
+
+        trackball_input_processor {
+            compatible = "zmk,input-processor-trackball";
+            label = "main_trackball_processor";
 
         arrow-layers = <3>;
         mouse-layers = <4>;
