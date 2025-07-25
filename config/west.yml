@@ -8,6 +8,10 @@ manifest:
       url-base: https://github.com/badjeff  
     - name: ssbb
       url-base: https://github.com/ssbb
+    - name: zmk
+      remote: TaKa202103 zmk
+      revision: feat/pointers-move-scroll
+     import: app/west.yml
 
 
   projects:
