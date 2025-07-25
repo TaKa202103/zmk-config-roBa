@@ -244,20 +244,6 @@
 
             tap-ms = <60>;
         };
-        encoder_tab_scroll: encoder_tab_scroll {
-             compatible = "zmk,behavior-sensor-rotate";
-             label = "Encoder Tab Scroll";
-             #sensor-binding-cells = <0>;
-             bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
-
-             tap-ms = <60>;
-        };
-        enc_key_press: enc_key_press {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "ENC_KEY_PRESS";
-            #binding-cells = <0>; 
-            bindings = <&kp A>, <&kp B>;
-        };
     };
 
     keymap {
