@@ -12,7 +12,7 @@
     tapping-term-ms = <180>;
 };
 
-#define default_layer 0
+#define DEFAULT 0
 #define FUNCTION 1
 #define NUM 2
 #define ARROW 3
@@ -263,7 +263,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        DEFAULT {
             bindings = <
 &mt ESC Q           &kp W         &kp E         &kp R                          &kp T                                                                   &kp Y                   &kp U  &kp I      &kp O    &lt 5 P
 &mt LEFT_SHIFT A    &kp S         &kp D         &lt 4 F                        &mt LEFT_ALT G          &kp LS(LG(S))                    &kp MINUS      &kp H                   &kp J  &kp K      &kp L    &lt 6 SQT
