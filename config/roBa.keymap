@@ -76,16 +76,17 @@
         zip_keybind_keys_custom: zip_keybind_keys {
             compatible = "zmk,input-processor-keybind";
             #input-processor-cells = <0>;
+            code = <INPUT_REL_HWHEEL>; 
             bindings = <&kp RIGHT_ARROW>,
                        <&kp LEFT_ARROW>,
                        <&kp UP_ARROW>,
                        <&kp DOWN_ARROW>;
-            tick = <5>;
-            wait-ms = <5>;
-            tap-ms = <10>;
+            tick = <10>;
+            wait-ms = <10>;
+            tap-ms = <20>;
             mode = <1>;
             threshold = <8>;
-            max_threshold = <100>;
+            max_threshold = <30>;
             max_pending_activations = <8>;
         };
     };
