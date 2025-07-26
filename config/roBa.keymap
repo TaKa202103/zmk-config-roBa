@@ -5,7 +5,6 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <input/processors/report_rate_limit.dtsi>
 #include <input/processors/zmk-input-processor-keybind.dtsi>
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
@@ -77,13 +76,16 @@
             compatible = "zmk,input-processor-keybind";
             #input-processor-cells = <0>;
             track_remainders;
-            bindings = <&kp RIGHT_ARROW>,
-                       <&kp LEFT_ARROW>,
-                       <&kp UP_ARROW>,
-                       <&kp DOWN_ARROW>;
+            bindings =
+                <&kp RIGHT_ARROW>,
+                <&kp LEFT_ARROW>,
+                <&kp UP_ARROW>,
+                <&kp DOWN_ARROW>;
+
             tick = <20>;
             wait-ms = <0>;
             tap-ms = <4>;
+
             //mode = <1>;
             //threshold = <8>;
             //max_threshold = <50>;
@@ -117,11 +119,6 @@
         at_sign {
             bindings = <&kp AT_SIGN>;
             key-positions = <10 11>;
-        };
-
-        Hash_Pond {
-            bindings = <&kp HASH>;
-            key-positions = <4 3>;
         };
 
         ESC_sign {
@@ -249,6 +246,14 @@
 
             label = "WIN_DOWN";
         };
+
+        choise: choise {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>, <&macro_tap>, <&kp LEFT_ALT &kp NUMBER_9>;
+
+            label = "CHOISE";
+        };
     };
 
     behaviors {
@@ -256,6 +261,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
             bindings = <&mo>, <&to_layer_0>;
+
             #binding-cells = <2>;
             tapping-term-ms = <180>;
         };
@@ -265,6 +271,7 @@
             label = "ENCODER_ MSC_UP_DOWN";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+
             tap-ms = <60>;
         };
     };
@@ -285,10 +292,10 @@
 
         FUNCTION {
             bindings = <
-&kp EXCLAMATION   &kp QUESTION  &kp AMPERSAND  &kp LEFT_BRACKET      &kp RIGHT_BRACKET                                &kp F1  &kp RIGHT_BRACE  &kp EQUAL  &kp TILDE  &kp PIPE
-&kp AT_SIGN       &kp HASH      &kp DOLLAR     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER        &kp F11  &kp F6  &kp F7           &kp F8     &kp F9     &kp F10
-&kp BACKSLASH     &kp SLASH     &kp PRCNT      &kp CARET             &kp COLON              &kp INT_YEN      &kp F8   &kp F1  &kp F2           &kp F3     &kp F4     &kp F5
-&kp LEFT_CONTROL  &kp LEFT_WIN  &kp LEFT_ALT   &trans                &trans                 &trans           &trans   &trans                                         &kp F12
+&kp EXCLAMATION   &kp QUESTION  &kp AMPERSAND  &kp LEFT_BRACKET      &kp RIGHT_BRACKET                                &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp EQUAL  &kp TILDE  &kp PIPE
+&kp AT_SIGN       &kp HASH      &kp DOLLAR     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER        &kp F11  &kp F6          &kp F7           &kp F8     &kp F9     &kp F10
+&kp BACKSLASH     &kp SLASH     &kp PRCNT      &kp CARET             &kp COLON              &kp INT_YEN      &kp F8   &kp F1          &kp F2           &kp F3     &kp F4     &kp F5
+&kp LEFT_CONTROL  &kp LEFT_WIN  &kp LEFT_ALT   &trans                &trans                 &trans           &trans   &trans                                                 &kp F12
             >;
 
             sensor-bindings = <&encoder_msc_up_down>;
