@@ -249,13 +249,6 @@
 
             label = "WIN_DOWN";
         };
-
-        sensors {
-            encoder_pgupdown {
-                compatible = "zmk,behavior-sensor-rotate";
-                input-bindings = <&scaler_slow &inc_dec_pgupdown>;  // ← 感度 1/2
-                location = <0>;
-        };
     };
 
     behaviors {
@@ -263,7 +256,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
             bindings = <&mo>, <&to_layer_0>;
-
             #binding-cells = <2>;
             tapping-term-ms = <180>;
         };
@@ -273,14 +265,6 @@
             label = "ENCODER_ MSC_UP_DOWN";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-
-            tap-ms = <60>;
-        };
-
-        inc_dec_pgupdown: inc_dec_pgupdown {
-            compatible = "zmk,behavior-inc-dec-kp";
-            bindings = <&kp PAGE_UP>, <&kp PAGE_DOWN>;
-            tick = <10>; 
             tap-ms = <60>;
         };
     };
