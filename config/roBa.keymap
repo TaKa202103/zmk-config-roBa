@@ -30,7 +30,7 @@
     excluded-positions = <10 18 19 22 30 31 34>;
 };
 
-&mkp_input_listener { input-processors = <&zip_temp_layer MOUSE 10000>; };
+&mkp_input_listener { input-processors = <&zip_temp_layer 4 10000>; };
 
 / {
     trackball_listener {
