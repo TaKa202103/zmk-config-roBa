@@ -258,11 +258,11 @@
             label = "WIN_DOWN";
         };
 
-    sensors {
-        encoder_pgupdown {
-            compatible = "zmk,behavior-sensor-rotate";
-            input-bindings = <&scaler_slow &inc_dec_pgupdown>;  // ← 感度 1/2
-            location = <0>;
+        sensors {
+            encoder_pgupdown {
+                compatible = "zmk,behavior-sensor-rotate";
+                input-bindings = <&scaler_slow &inc_dec_pgupdown>;  // ← 感度 1/2
+                location = <0>;
         };
     };
 
