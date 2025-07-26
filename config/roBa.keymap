@@ -32,7 +32,7 @@
 
 &mkp_input_listener { input-processors = <&zip_temp_layer MOUSE 10000>; };
 
-&trackball_listener {
+trackball_listener {
     compatible = "zmk,input-listener";
     device = <&trackball>;
     input-processors = <
@@ -57,7 +57,7 @@
     };
 };
 
-&trackball {
+trackball {
     ARROW {
         layers = <2>;
         bindings =
