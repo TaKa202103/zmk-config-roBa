@@ -29,7 +29,16 @@
     excluded-positions = <10 18 19 22 30 31 34>;
 };
 
-&mkp_input_listener { input-processors = <&zip_temp_layer MOUSE 10000>; };
+&mkp_input_listener { input-processors = <&zip_temp_layer 4 10000>; };
+
+&mmv_input_listener { input-processors = <&zip_temp_layer 4 2000>; };
+
+&mmv {
+    x-input-code = <INPUT_REL_X>;
+    y-input-code = <INPUT_REL_Y>;
+    time-to-max-speed-ms = <300>;
+    acceleration-exponent = <2>;
+};
 
 &trackball_listener {
     compatible = "zmk,input-listener";
