@@ -82,6 +82,11 @@ trackball {
             track-remainders;
         };
 
+        zip_report_rate_limit_15: zip_report_rate_limit_15 {
+            compatible = "zmk,input-processor-report-rate-limit";
+            rate = <15>;
+        };
+
         //zip_keybind_keys_custom: zip_keybind_keys {
             //compatible = "zmk,input-processor-keybind";
             //#input-processor-cells = <0>;
