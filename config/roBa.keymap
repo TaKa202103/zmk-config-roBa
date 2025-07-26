@@ -94,7 +94,7 @@
             #input-processor-cells = <2>;
             type = <INPUT_EV_REL>;
             codes = <INPUT_REL_DIAL>;  // or REL_WHEEL depending on your encoder
-            scale = <0.5>;
+            scale = <1>;
             track-remainders;
         };
     };
