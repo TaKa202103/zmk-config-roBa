@@ -135,6 +135,11 @@
             bindings = <&kp LEFT_ALT>;
             key-positions = <18 19>;
         };
+
+        choise {
+            bindings = <&choise>;
+            key-positions = <2 3>;
+        };
     };
 
     macros {
