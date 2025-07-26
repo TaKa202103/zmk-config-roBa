@@ -140,6 +140,16 @@
             bindings = <&choise>;
             key-positions = <2 1>;
         };
+
+        keisenawase {
+            bindings = <&keisen>;
+            key-positions = <2 3>;
+        };
+
+        zukeisentaku {
+            bindings = <&zukei>;
+            key-positions = <38 3 4>;
+        };
     };
 
     macros {
