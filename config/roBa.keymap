@@ -259,6 +259,28 @@
 
             label = "CHOISE";
         };
+
+        keisen: keisen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&none>,
+                <&macro_tap>,
+                <&kp LEFT_ALT &kp NUMBER_0 &kp NUMBER_9>;
+
+            label = "KEISEN";
+        };
+
+        zukei: zukei {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&none>,
+                <&macro_tap>,
+                <&kp LEFT_ALT &kp NUMBER_0 &kp NUMBER_8>;
+
+            label = "ZUKEI";
+        };
     };
 
     behaviors {
