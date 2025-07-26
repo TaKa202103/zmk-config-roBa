@@ -32,50 +32,44 @@
 
 &mkp_input_listener { input-processors = <&zip_temp_layer MOUSE 10000>; };
 
-trackball_listener {
-    compatible = "zmk,input-listener";
-    device = <&trackball>;
-    input-processors = <&zip_report_rate_limit_15>;
-
-    auto-mouse-layer {
-        layers = <0 4>;
-        input-processors = <&zip_temp_layer MOUSE 10000>;
-        process-next;
-    };
-
-    scroller {
-        layers = <3>;
-        input-processors =
-            <&zip_report_rate_limit 15>,
-            <&zip_xy_scaler 1 12>,
-            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            <&zip_xy_to_scroll_mapper>;
-        process-next;
-    };
-
-    arrows {
-        layers = <2>;
-        input-processors = <&zip_keybind_arrows>;
-        process-next;
-    };
-};
-
-trackball {
-    arrows: arrows {
-        layers = <2>;
-        bindings =
-            <&kp RIGHT_ARROW>,
-            <&kp LEFT_ARROW>,
-            <&kp UP_ARROW>,
-            <&kp DOWN_ARROW>;
-
-        tick = <10>;
-        wait-ms = <5>;
-        tap-ms = <5>;
-    };
-};
-
 / {
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+        input-processors = <&zip_report_rate_limit_15>;
+
+        auto-mouse-layer {
+            layers = <0 4>;
+            input-processors = <&zip_temp_layer MOUSE 10000>;
+            process-next;
+        };
+
+        scroller {
+            layers = <3>;
+            input-processors =
+                <&zip_report_rate_limit 15>,
+                <&zip_xy_scaler 1 12>,
+                <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
+                <&zip_xy_to_scroll_mapper>;
+            process-next;
+        };
+    };
+
+        trackball {
+        arrows: arrows {
+            layers = <2>;
+            bindings =
+                <&kp RIGHT_ARROW>,
+                <&kp LEFT_ARROW>,
+                <&kp UP_ARROW>,
+                <&kp DOWN_ARROW>;
+
+            tick = <10>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+        };
+    };
+
     input_processors {
         wheel_x_scaler: wheel_x_scaler {
             compatible = "zmk,input-processor-scaler";
@@ -89,19 +83,6 @@ trackball {
             compatible = "zmk,input-processor-report-rate-limit";
             rate = <15>;
         };
-
-        zip_keybind_arrows: zip_keybind_arrows {
-            compatible = "zmk,input-processor-keybind";
-            #input-processor-cells = <0>;
-            bindings =
-                <&kp RIGHT_ARROW>,
-                <&kp LEFT_ARROW>,
-                <&kp UP_ARROW>,
-                <&kp DOWN_ARROW>;
-            tick = <10>;
-            wait-ms = <5>;
-            tap-ms = <5>;
-         };
     };
 
     combos {
