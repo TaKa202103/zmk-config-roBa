@@ -80,12 +80,12 @@
                        <&kp LEFT_ARROW>,
                        <&kp UP_ARROW>,
                        <&kp DOWN_ARROW>;
-            tick = <10>;
-            wait-ms = <15>;
-            tap-ms = <15>;
+            tick = <5>;
+            wait-ms = <5>;
+            tap-ms = <10>;
             mode = <1>;
-            threshold = <15>;
-            max_threshold = <200>;
+            threshold = <8>;
+            max_threshold = <100>;
             max_pending_activations = <8>;
         };
     };
