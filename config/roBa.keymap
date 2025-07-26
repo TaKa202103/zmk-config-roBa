@@ -89,14 +89,6 @@
             //max_threshold = <50>;
             //max_pending_activations = <8>;
         };
-        scaler_slow: scaler_slow {
-            compatible = "zmk,input-processor-scaler";
-            #input-processor-cells = <2>;
-            type = <INPUT_EV_REL>;
-            codes = <INPUT_REL_DIAL>;  // or REL_WHEEL depending on your encoder
-            scale = <1>;
-            track-remainders;
-        };
     };
 
     combos {
@@ -288,8 +280,8 @@
         inc_dec_pgupdown: inc_dec_pgupdown {
             compatible = "zmk,behavior-inc-dec-kp";
             bindings = <&kp PAGE_UP>, <&kp PAGE_DOWN>;
-            tap-ms = <60>;
             tick = <10>; 
+            tap-ms = <60>;
         };
     };
 
