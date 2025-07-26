@@ -84,10 +84,10 @@
             tick = <20>;
             wait-ms = <10>;
             tap-ms = <20>;
-            mode = <0>;
-            threshold = <8>;
-            max_threshold = <50>;
-            max_pending_activations = <8>;
+            //mode = <1>;
+            //threshold = <8>;
+            //max_threshold = <50>;
+            //max_pending_activations = <8>;
         };
     };
 
