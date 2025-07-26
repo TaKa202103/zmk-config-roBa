@@ -43,8 +43,6 @@
 
 &xiao_serial { status = "disabled"; };
 
-#include <zephyr/dt-bindings/input/input-event-codes.h>
-
 &spi0 {
     status = "okay";
     compatible = "nordic,nrf-spim";
@@ -61,3 +59,4 @@
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
     };
 };
+
