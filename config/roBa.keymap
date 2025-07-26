@@ -148,7 +148,7 @@
 
         zukeisentaku {
             bindings = <&zukei>;
-            key-positions = <38 3 4>;
+            key-positions = <3 4>;
         };
     };
 
