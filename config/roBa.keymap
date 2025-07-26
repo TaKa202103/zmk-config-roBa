@@ -138,7 +138,7 @@
 
         choise {
             bindings = <&choise>;
-            key-positions = <2 3>;
+            key-positions = <2 1>;
         };
     };
 
