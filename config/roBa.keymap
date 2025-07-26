@@ -89,6 +89,14 @@
             //max_threshold = <50>;
             //max_pending_activations = <8>;
         };
+        scaler_slow: scaler_slow {
+            compatible = "zmk,input-processor-scaler";
+            #input-processor-cells = <2>;
+            type = <INPUT_EV_REL>;
+            codes = <INPUT_REL_DIAL>;  // or REL_WHEEL depending on your encoder
+            scale = <0.5>;
+            track-remainders;
+        };
     };
 
     combos {
@@ -250,11 +258,11 @@
             label = "WIN_DOWN";
         };
 
-        encoder: encoder {
-            compatible = "zmk,left_encoder";
-            bindings = <&inc_dec_kp>;
-            tick = <4>;
-            acceleration = <1>;
+    sensors {
+        encoder_pgupdown {
+            compatible = "zmk,behavior-sensor-rotate";
+            input-bindings = <&scaler_slow &inc_dec_pgupdown>;  // ← 感度 1/2
+            location = <0>;
         };
     };
 
@@ -277,10 +285,11 @@
             tap-ms = <60>;
         };
 
-        // inc_dec_pgupdown: inc_dec_pgupdown {
-            // compatible = "zmk,behavior-inc-dec-kp";
-            // bindings = <&kp PAGE_UP>, <&kp PAGE_DOWN>;
-            // };
+        inc_dec_pgupdown: inc_dec_pgupdown {
+            compatible = "zmk,behavior-inc-dec-kp";
+            bindings = <&kp PAGE_UP>, <&kp PAGE_DOWN>;
+            tap-ms = <60>;
+        };
     };
 
     keymap {
