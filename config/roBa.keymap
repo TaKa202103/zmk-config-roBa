@@ -38,6 +38,8 @@
     y-input-code = <INPUT_REL_Y>;
     time-to-max-speed-ms = <300>;
     acceleration-exponent = <2>;
+    min-speed-factor = <0.2>;  
+    max-speed-factor = <3.0>;
 };
 
 &trackball_listener {
