@@ -76,7 +76,7 @@
         zip_keybind_keys_custom: zip_keybind_keys {
             compatible = "zmk,input-processor-keybind";
             #input-processor-cells = <0>;
-            code = <INPUT_REL_HWHEEL>; 
+            track_remainders;
             bindings = <&kp RIGHT_ARROW>,
                        <&kp LEFT_ARROW>,
                        <&kp UP_ARROW>,
