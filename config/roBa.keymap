@@ -37,7 +37,7 @@
     x-input-code = <INPUT_REL_X>;
     y-input-code = <INPUT_REL_Y>;
     time-to-max-speed-ms = <1000>;
-    acceleration-exponent = <2>;
+    acceleration-exponent = <1>;
 };
 
 &trackball_listener {
