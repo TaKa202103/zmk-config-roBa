@@ -65,7 +65,7 @@
 
     ARROW {
         layers = <2>;
-        input-processors = <&zip_keybind_keys_custom> &zip_xy_scaler 1 3>;
+        input-processors = <&zip_keybind_keys_custom> , <&zip_xy_scaler 1 3>;
         process-next;
     };
 
