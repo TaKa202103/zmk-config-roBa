@@ -21,15 +21,15 @@
 #define NUM 2
 #define ARROW 3
 #define MOUSE 4
-#define SCROLL 5
-#define layer_6 6
+#define MACRO 5
+#define BLUETOOTH 6
 
 &zip_temp_layer {
     require-prior-idle-ms = <200>;
-    excluded-positions = <10 18 19 22 30 31 34>;
+    excluded-positions = <10 17 18 19 22 30 31 34>;
 };
 
-&mkp_input_listener { input-processors = <&zip_temp_layer 4 10000>; };
+&mkp_input_listener { input-processors = <&zip_temp_layer 4 2000>; };
 
 &mmv_input_listener { input-processors = <&zip_temp_layer 4 2000>; };
 
@@ -49,7 +49,7 @@
 
     auto-mouse-layer {
         layers = <0 4>;
-        input-processors = <&zip_temp_layer MOUSE 10000>;
+        input-processors = <&zip_temp_layer MOUSE 2000>;
         process-next;
     };
 
@@ -57,16 +57,16 @@
         layers = <3>;
         input-processors =
             <&zip_report_rate_limit 15>,
-            <&zip_xy_scaler 1 12>,
+            <&zip_xy_scaler 1 15>,
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_to_scroll_mapper>;
-
         process-next;
     };
 
     ARROW {
         layers = <2>;
         input-processors = <&zip_keybind_keys_custom>;
+        input-processors = <&zip_xy_scaler 1 3>;
         process-next;
     };
 };
@@ -91,7 +91,7 @@
                 <&kp UP_ARROW>,
                 <&kp DOWN_ARROW>;
 
-            tick = <20>;
+            tick = <10>;
             wait-ms = <0>;
             tap-ms = <4>;
 
@@ -378,7 +378,7 @@
             >;
         };
 
-        SCROLL {
+        MACRO {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
@@ -387,7 +387,7 @@
             >;
         };
 
-        layer_6 {
+        BLUETOOTH {
             bindings = <
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans        &trans                              &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans        &trans        &trans        &trans        &trans  &trans      &bt BT_CLR_ALL  &bt BT_CLR    &trans        &trans        &trans        &trans
