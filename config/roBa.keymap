@@ -60,12 +60,14 @@
             <&zip_xy_scaler 1 30>,
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_to_scroll_mapper>;
+
         process-next;
     };
 
     ARROW {
         layers = <2>;
-        input-processors =  <&zip_xy_scaler 1 3>, <&zip_keybind_keys_custom>;
+        input-processors = <&zip_xy_scaler 1 3>, <&zip_keybind_keys_custom>;
+
         process-next;
     };
 
@@ -276,34 +278,18 @@
             label = "WIN_DOWN";
         };
 
-        choise: choise {
+        Alt1: Alt1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>, <&macro_tap>, <&kp LEFT_ALT &kp NUMBER_9>;
-
-            label = "CHOISE";
+            bindings = <&none &kp LEFT_ALT &kp NUMBER_1>;
+            label = "ALT1";
         };
 
-        keisen: keisen {
+        Alt2: Alt2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&none>,
-                <&macro_tap>,
-                <&kp LEFT_ALT &kp NUMBER_0 &kp NUMBER_9>;
-
-            label = "KEISEN";
-        };
-
-        zukei: zukei {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&none>,
-                <&macro_tap>,
-                <&kp LEFT_ALT &kp NUMBER_0 &kp NUMBER_8>;
-
-            label = "ZUKEI";
+            bindings = <&none &kp LEFT_ALT &kp NUMBER_2>;
+            label = "ALT2";
         };
     };
 
