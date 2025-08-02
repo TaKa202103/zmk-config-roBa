@@ -291,6 +291,125 @@
             bindings = <&none &kp LEFT_ALT &kp NUMBER_2>;
             label = "ALT2";
         };
+
+        Alt3: Alt3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_ALT &kp NUMBER_3>;
+            label = "ALT3";
+        };
+
+        Alt4: Alt4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_ALT &kp NUMBER_4>;
+            label = "ALT4";
+        };
+
+        Alt5: Alt5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_ALT &kp NUMBER_5>;
+            label = "ALT5";
+        };
+
+        Alt6: Alt6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_ALT &kp NUMBER_6>;
+            label = "ALT6";
+        };
+
+        Alt7: Alt7 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_ALT &kp NUMBER_7>;
+            label = "ALT7";
+        };
+
+        Alt8: Alt8 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_ALT &kp NUMBER_8>;
+            label = "ALT8";
+        };
+
+        Alt9: Alt9 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_ALT &kp NUMBER_9>;
+            label = "ALT9";
+        };
+
+        Alt00: Alt00 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_ALT &kp NUMBER_0 &kp NUMBER_0>;
+            label = "ALT00";
+        };
+
+        Alt09: Alt09 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_ALT &kp NUMBER_0 &kp NUMBER_9>;
+            label = "ALT09";
+        };
+
+        Alt08: Alt08 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_ALT &kp NUMBER_0 &kp NUMBER_8>;
+            label = "ALT08";
+        };
+
+        Alt07: Alt07 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_ALT &kp NUMBER_0 &kp NUMBER_7>;
+            label = "ALT07";
+        };
+
+        Alt06: Alt06 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_ALT &kp NUMBER_0 &kp NUMBER_6>;
+            label = "ALT06";
+        };
+
+        Alt05: Alt05 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_ALT &kp NUMBER_0 &kp NUMBER_5>;
+            label = "ALT05";
+        };
+
+        Alt04: Alt04 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_ALT &kp NUMBER_0 &kp NUMBER_4>;
+            label = "ALT04";
+        };
+
+        Alt03: Alt03 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_ALT &kp NUMBER_0 &kp NUMBER_3>;
+            label = "ALT03";
+        };
+
+        Alt02: Alt02 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_ALT &kp NUMBER_0 &kp NUMBER_2>;
+            label = "ALT02";
+        };
+
+        Alt01: Alt01 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_ALT &kp NUMBER_0 &kp NUMBER_1>;
+            label = "ALT01";
+        };
     };
 
     behaviors {
