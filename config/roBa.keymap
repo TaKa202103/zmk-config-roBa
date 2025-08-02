@@ -152,18 +152,18 @@
             key-positions = <18 19>;
         };
 
-        choise {
-            bindings = <&choise>;
-            key-positions = <2 1>;
+        Alt09 {
+            bindings = <&Alt09>;
+            key-positions = <1 2>;
         };
 
-        keisenawase {
-            bindings = <&keisen>;
+        Alt08 {
+            bindings = <&Alt08>;
             key-positions = <2 3>;
         };
 
-        zukeisentaku {
-            bindings = <&zukei>;
+        Alt07 {
+            bindings = <&Alt07>;
             key-positions = <3 4>;
         };
     };
