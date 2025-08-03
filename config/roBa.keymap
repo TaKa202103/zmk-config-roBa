@@ -553,10 +553,10 @@
 
         MACRO {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &Alt4  &Alt6   &Alt5  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &Alt06  &Alt01  &Alt2  &Alt7   &Alt3  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &Alt05  &Alt04  &Alt8  &Alt09  &Alt9  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &Alt03  &Alt02                        &trans
             >;
         };
 
