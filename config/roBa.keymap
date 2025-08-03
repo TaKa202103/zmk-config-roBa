@@ -410,6 +410,13 @@
             bindings = <&none &kp LEFT_ALT &kp NUMBER_0 &kp NUMBER_1>;
             label = "ALT01";
         };
+
+        ataiharituke: ataiharituke {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_ALT &kp H &kp V &kp V>;
+            label = "ATAIHARITUKE";
+        };
     };
 
     behaviors {
