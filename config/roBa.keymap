@@ -170,6 +170,16 @@
             bindings = <&kp C_MUTE>;
             key-positions = <39 40>;
         };
+
+        TeamsMute2 {
+            bindings = <&kp LS(LC(M))>;
+            key-positions = <33 32>;
+        };
+
+        Mute {
+            bindings = <&kp C_MUTE>;
+            key-positions = <28 29>;
+        };
     };
 
     macros {
