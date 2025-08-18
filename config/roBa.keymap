@@ -525,7 +525,7 @@
 &kp LEFT_CONTROL            &kp LEFT_WIN  &kp LEFT_ALT   &trans                &trans                 &trans           &trans   &trans                                                 &kp F12
             >;
 
-            sensor-bindings = <&encoder_msc_up_down>;
+            sensor-bindings = <&inc_dec_kp LC(TAB) LC(LS(TAB))>;
         };
 
         NUM {
