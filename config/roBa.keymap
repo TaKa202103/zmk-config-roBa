@@ -161,9 +161,14 @@
             key-positions = <26 27>;
         };
 
-        mute {
-            bindings = <&kp K_MUTE>;
-            key-positions = <41 37>;
+        TeamsMute {
+            bindings = <&kp LS(LC(M))>;
+            key-positions = <37 41>;
+        };
+
+        Mute {
+            bindings = <&kp C_MUTE>;
+            key-positions = <39 40>;
         };
     };
 
