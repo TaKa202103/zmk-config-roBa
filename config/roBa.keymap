@@ -160,6 +160,11 @@
             bindings = <&new_folder>;
             key-positions = <26 27>;
         };
+
+        mute {
+            bindings = <&kp K_MUTE>;
+            key-positions = <41 37>;
+        };
     };
 
     macros {
