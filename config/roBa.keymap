@@ -176,7 +176,7 @@
             key-positions = <33 32>;
         };
 
-        Mute {
+        Mute2 {
             bindings = <&kp C_MUTE>;
             key-positions = <28 29>;
         };
