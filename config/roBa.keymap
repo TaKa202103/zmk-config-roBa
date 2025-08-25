@@ -202,8 +202,8 @@
             #binding-cells = <0>;
             bindings =
                 <&none &kp SPACE>,
-                <&macro_wait_time 100>,
-                <&kp BACKSPACE &kp LS(T) &kp A &kp K &kp A &kp HASH &kp NUMBER_0 &kp NUMBER_5 &kp NUMBER_2 &kp NUMBER_2 &kp ENTER>;
+                <&macro_wait_time 150>,
+                <&kp BACKSPACE &kp LS(Y) &kp U &kp T &kp O &kp HASH &kp NUMBER_0 &kp NUMBER_5 &kp NUMBER_3 &kp NUMBER_0>;
 
             label = "NEWPASS";
             wait-ms = <30>;
