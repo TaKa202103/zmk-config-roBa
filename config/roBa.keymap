@@ -90,8 +90,8 @@
                 <&kp UP_ARROW>,
                 <&kp DOWN_ARROW>;
 
-            tick = <8>;
-            wait-ms = <2>;
+            tick = <4>;
+            wait-ms = <1>;
             tap-ms = <0>;
 
             //mode = <1>;
