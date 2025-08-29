@@ -93,7 +93,7 @@
             tick = <10>;
             wait-ms = <150>;
             tap-ms = <100>;
-            mode = <0>;
+            //mode = <0>;
             threshold = <8>;
             max_threshold = <50>;
             max_pending_activations = <8>;
