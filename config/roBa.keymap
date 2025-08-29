@@ -91,10 +91,10 @@
                 <&kp DOWN_ARROW>;
 
             tick = <10>;
-            wait-ms = <150>;
+            wait-ms = <50>;
             tap-ms = <100>;
             //mode = <0>;
-            threshold = <8>;
+            threshold = <4>;
             max_threshold = <50>;
             max_pending_activations = <8>;
         };
