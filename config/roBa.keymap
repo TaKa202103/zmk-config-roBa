@@ -92,9 +92,9 @@
 
             tick = <4>;
             wait-ms = <0>;
-            tap-ms = <10>;
+            tap-ms = <15>;
             mode = <1>;
-            threshold = <0>;
+            threshold = <1>;
             max_threshold = <50>;
             max_pending_activations = <8>;
         };
