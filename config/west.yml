@@ -12,22 +12,17 @@ manifest:
       url-base: https://github.com/zettaface
 
   projects:
+    # https://github.com/zmkfirmware/zmk
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-      
-    # # https://github.com/inorichi/zmk-pmw3610-driver
-    # - name: zmk-pmw3610-driver
-    #   remote: inorichi
-    #   revision: main
-    #   path: modules/zmk-pmw3610-driver
 
-    # https://github.com/badjeff/zmk-pmw3610-driver
+    # https://github.com/inorichi/zmk-pmw3610-driver
     - name: zmk-pmw3610-driver
-      remote: badjeff
+      remote: inorichi
       revision: main
-      path: modules/zmk-pmw3610-driver-badjeff
+      path: modules/zmk-pmw3610-driver
 
     # https://github.com/badjeff/zmk-input-processor-report-rate-limit
     - name: zmk-input-processor-report-rate-limit
