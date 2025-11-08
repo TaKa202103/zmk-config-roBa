@@ -1,9 +1,7 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/petejohanson
-    - name: inorichi
-      url-base: https://github.com/inorichi
+    - name: kloir-z
+      url-base: https://github.com/kloir-z
     - name: badjeff
       url-base: https://github.com/badjeff  
     - name: ssbb
@@ -13,13 +11,12 @@ manifest:
 
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: feat/pointers-move-scroll
-      import: app/west.yml
-      
-    - name: zmk-pmw3610-driver
-      remote: inorichi
+      remote: kloir-z
       revision: main
+      import: app/west.yml
+    - name: zmk-pmw3610-driver
+      remote: kloir-z
+      revision: scroll-acceleration-feature 
 
     # https://github.com/badjeff/zmk-input-processor-report-rate-limit
     - name: zmk-input-processor-report-rate-limit
