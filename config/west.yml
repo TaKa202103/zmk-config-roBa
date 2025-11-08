@@ -1,9 +1,9 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
-    - name: inorichi
-      url-base: https://github.com/inorichi
+    #- name: zmkfirmware
+      #url-base: https://github.com/zmkfirmware
+    #- name: inorichi
+      #url-base: https://github.com/inorichi
     - name: badjeff
       url-base: https://github.com/badjeff  
     - name: ssbb
@@ -17,16 +17,16 @@ manifest:
 
   projects:
     # https://github.com/zmkfirmware/zmk
-    - name: zmk
-      remote: zmkfirmware
-      revision: main
-      import: app/west.yml
+    #- name: zmk
+      #remote: zmkfirmware
+      #revision: main
+      #import: app/west.yml
 
     # https://github.com/inorichi/zmk-pmw3610-driver
-    - name: zmk-pmw3610-driver
-      remote: inorichi
-      revision: main
-      path: modules/zmk-pmw3610-driver
+    #- name: zmk-pmw3610-driver
+      #remote: inorichi
+      #revision: main
+      #path: modules/zmk-pmw3610-driver
 
     # https://github.com/badjeff/zmk-input-processor-report-rate-limit
     - name: zmk-input-processor-report-rate-limit
