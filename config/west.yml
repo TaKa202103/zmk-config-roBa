@@ -16,8 +16,8 @@ manifest:
   projects:
     # ✅ input-processors対応ZMK本体
     - name: zmk
-      remote: inorichi
-      revision: input-processors
+      remote: zmkfirmware
+      revision: feat/studio-rpc-usb-uart
       import: app/west.yml
 
     # 🧭 PMW3610ドライバ
