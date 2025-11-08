@@ -1,7 +1,7 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/petejohanson 
+      url-base: https://github.com/zmkfirmware
     - name: inorichi
       url-base: https://github.com/inorichi
     - name: badjeff
@@ -10,28 +10,27 @@ manifest:
       url-base: https://github.com/ssbb
     - name: zettaface
       url-base: https://github.com/zettaface
-    - name: kloir-z
-      url-base: https://github.com/kloir-z
 
   projects:
-    # ✅ input-processors対応ZMK本体
+    # https://github.com/zmkfirmware/zmk
     - name: zmk
       remote: zmkfirmware
-      revision: feat/studio-rpc-usb-uart
+      revision: main
       import: app/west.yml
 
-    # 🧭 PMW3610ドライバ
+    # https://github.com/inorichi/zmk-pmw3610-driver
     - name: zmk-pmw3610-driver
       remote: inorichi
       revision: main
+      path: modules/zmk-pmw3610-driver
 
-    # 🕒 レポートレート制限
+    # https://github.com/badjeff/zmk-input-processor-report-rate-limit
     - name: zmk-input-processor-report-rate-limit
       remote: badjeff
       revision: main
       path: modules/zmk-input-processor-report-rate-limit
 
-    # 🎧 Listeners関連
+    # https://github.com/ssbb/zmk-listeners
     - name: zmk-listeners
       remote: ssbb
       revision: v1
@@ -40,7 +39,6 @@ manifest:
       remote: badjeff
       revision: main
 
-    # 🎹 input-processor-keybind
     - name: zmk-input-processor-keybind
       remote: zettaface
       revision: main
