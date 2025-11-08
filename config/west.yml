@@ -10,6 +10,8 @@ manifest:
       url-base: https://github.com/ssbb
     - name: zettaface
       url-base: https://github.com/zettaface
+    - name: iwk7273
+      url-base: https://github.com/iwk7273
 
   projects:
     # https://github.com/zmkfirmware/zmk
@@ -42,6 +44,11 @@ manifest:
     - name: zmk-input-processor-keybind
       remote: zettaface
       revision: main
+
+    - name: zmk-feature-scaling
+      remote: iwk7273
+      revision: main
+      import: west.yml
 
   self:
     path: config
