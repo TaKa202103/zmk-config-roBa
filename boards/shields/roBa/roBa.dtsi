@@ -1,5 +1,11 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <physical_layouts.dtsi>
+#include <input/processors.dtsi>
+
+#define SCALING_MODE 1
+#define MAX_OUTPUT 800
+#define HALF_INPUT 50
+#define EXPONENT_TENTHS 20
 
 / {
     chosen {
@@ -112,9 +118,21 @@
         triggers-per-rotation = <6>;
     };
 
+    motion_scaler: motion_scaler {
+        compatible = "zmk,input-processor-motion-scaler";
+        #input-processor-cells = <0>;
+        scaling-mode = <SCALING_MODE>;
+        max-output = <MAX_OUTPUT>;
+        half-input = <HALF_INPUT>;
+        exponent-tenths = <EXPONENT_TENTHS>;
+        track-remainders;
+    };
+
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
-        status = "disabled";
+        device = <&trackball>;
+
+        input-processors = <&motion_scaler>;
     };
 };
 
