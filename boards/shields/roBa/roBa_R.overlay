@@ -4,19 +4,6 @@
     col-offset = <6>;
 };
 
-motion_scaler_node: motion_scaler {
-    compatible = "zmk,input-processor-motion-scaler";
-    #input-processor-cells = <0>;
-    scaling-mode = <1>;
-    max-output = <300>;
-    half-input = <50>;
-    exponent-tenths = <20>;
-};
-
-&trackball {
-    processors = <&motion_scaler_node>;
-};
-
 &kscan0 {
         col-gpios
             = <&xiao_d 10 GPIO_ACTIVE_HIGH>
@@ -62,14 +49,5 @@ motion_scaler_node: motion_scaler {
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-    };
-};
-
-&{
-    trackball_listener: trackball_listener {
-        status = "okay";
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-        input-processors = <&motion_scaler_node>;
     };
 };
