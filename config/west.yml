@@ -49,6 +49,7 @@ manifest:
       remote: iwk7273
       revision: main
       import: west.yml
+      path: modules/zmk-feature-scaling
 
   self:
     path: config
