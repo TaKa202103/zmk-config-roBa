@@ -69,6 +69,6 @@ trackball_listener {
     status = "okay";
     compatible = "zmk,input-listener";
     device = <&trackball>;
-    input-processors = <&motion_scaler>;
+    input-processors = <&motion_scaler_node>;
 };
 
