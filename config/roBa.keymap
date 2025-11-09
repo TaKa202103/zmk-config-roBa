@@ -74,10 +74,10 @@
 motion_scaler: motion_scaler {
     compatible = "zmk,input-processor-motion-scaler";
     #input-processor-cells = <0>;
-    scaling-mode = <1>;
-    max-output = <300>;
-    half-input = <50>;
-    exponent-tenths = <20>;
+    scaling-mode = <1>;         
+    max-output = <1000>;         
+    half-input = <50>;          
+    exponent-tenths = <20>;     
 };
 
 / {
