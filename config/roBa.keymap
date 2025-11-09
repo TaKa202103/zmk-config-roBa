@@ -90,13 +90,13 @@
                 <&kp UP_ARROW>,
                 <&kp DOWN_ARROW>;
 
-            tick = <10>;
-            wait-ms = <5>;
+            tick = <4>;
+            wait-ms = <10>;
             tap-ms = <20>;
             mode = <1>;
-            threshold = <10>;
-            max_threshold = <100>;
-            max_pending_activations = <10>;
+            threshold = <0>;
+            max_threshold = <10>;
+            max_pending_activations = <5>;
         };
     };
 
