@@ -35,7 +35,7 @@
 &trackball_listener {
     compatible = "zmk,input-listener";
     device = <&trackball>;
-    input-processors = < &zip_report_rate_limit 15 &motion_scaler >;
+    input-processors = < &zip_report_rate_limit 15 >;
 
     auto-mouse-layer {
         layers = <0 4>;
