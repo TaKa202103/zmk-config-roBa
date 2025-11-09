@@ -15,7 +15,8 @@
     quick-tap-ms = <0>;
     tapping-term-ms = <180>;
 };
-&pointing_device {
+
+&trackball {
     processors = <&motion_scaler>;
 };
 
