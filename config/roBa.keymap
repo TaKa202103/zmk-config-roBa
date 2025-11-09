@@ -37,6 +37,7 @@
     device = <&trackball>;
     input-processors = <
         &zip_report_rate_limit 15
+　　　 　&motion_scaler
     >;
 
     auto-mouse-layer {
