@@ -49,7 +49,7 @@ motion_scaler: motion_scaler {
     compatible = "zmk,input-listener";
     device = <&trackball>;
     input-processors = < 
-        &zip_report_rate_limit 15
+        &zip_report_rate_limit 15,
         &motion_scaler
     >;
 
