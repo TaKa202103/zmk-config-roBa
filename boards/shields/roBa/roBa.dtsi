@@ -119,7 +119,7 @@
         triggers-per-rotation = <6>;
     };
 
-    motion_scaler: motion_scaler {
+    motion_scaler_node: motion_scaler {
         compatible = "zmk,input-processor-motion-scaler";
         #input-processor-cells = <0>;
         scaling-mode = <SCALING_MODE>;
