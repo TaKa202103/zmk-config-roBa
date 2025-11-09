@@ -15,6 +15,18 @@
     quick-tap-ms = <0>;
     tapping-term-ms = <180>;
 };
+&pointing_device {
+    processors = <&motion_scaler>;
+};
+
+motion_scaler: motion_scaler {
+    compatible = "zmk,input-processor-motion-scaler";
+    #input-processor-cells = <0>;
+    scaling-mode = <1>;
+    max-output = <300>;
+    half-input = <50>;
+    exponent-tenths = <20>;
+};
 
 &mkp_input_listener { input-processors = <&zip_temp_layer 4 1000>; 
 };
@@ -37,6 +49,7 @@
     device = <&trackball>;
     input-processors = < 
         &zip_report_rate_limit 15
+        &motion_scaler
     >;
 
     auto-mouse-layer {
