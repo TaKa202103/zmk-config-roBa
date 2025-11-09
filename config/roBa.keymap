@@ -77,7 +77,7 @@ motion_scaler: motion_scaler {
     scaling-mode = <1>;
     max-output = <300>;
     half-input = <50>;
-    exponent-tenths = <20>; // p = 2.0
+    exponent-tenths = <20>;
 };
 
 / {
