@@ -70,6 +70,15 @@
     };
 };
 
+motion_scaler: motion_scaler {
+    compatible = "zmk,input-processor-motion-scaler";
+    #input-processor-cells = <0>;
+    scaling-mode = <1>;
+    max-output = <300>;
+    half-input = <50>;
+    exponent-tenths = <20>; // p = 2.0
+};
+
 / {
     input_processors {
         wheel_x_scaler: wheel_x_scaler {
