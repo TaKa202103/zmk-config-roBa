@@ -32,6 +32,15 @@
     excluded-positions = <10 17 18 19 22 30 31 34>;
 };
 
+motion_scaler: motion_scaler {
+    compatible = "zmk,input-processor-motion-scaler";
+    #input-processor-cells = <0>;
+    scaling-mode = <1>;         
+    max-output = <1000>;         
+    half-input = <50>;          
+    exponent-tenths = <20>;     
+};
+
 &trackball_listener {
     compatible = "zmk,input-listener";
     device = <&trackball>;
@@ -66,15 +75,6 @@
         input-processors = <&zip_xy_scaler 1 2>;
         process-next;
     };
-};
-
-motion_scaler: motion_scaler {
-    compatible = "zmk,input-processor-motion-scaler";
-    #input-processor-cells = <0>;
-    scaling-mode = <1>;         
-    max-output = <1000>;         
-    half-input = <50>;          
-    exponent-tenths = <20>;     
 };
 
 / {
