@@ -1,12 +1,5 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <physical_layouts.dtsi>
-#include <zephyr/dt-bindings/input/input-event-codes.h>
-#include <input/processors.dtsi>
-
-#define SCALING_MODE 1
-#define MAX_OUTPUT 300
-#define HALF_INPUT 50
-#define EXPONENT_TENTHS 20
 
 / {
     chosen {
@@ -117,16 +110,6 @@
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder &right_encoder>;
         triggers-per-rotation = <6>;
-    };
-
-    motion_scaler_node: motion_scaler {
-        compatible = "zmk,input-processor-motion-scaler";
-        #input-processor-cells = <0>;
-        scaling-mode = <SCALING_MODE>;
-        max-output = <MAX_OUTPUT>;
-        half-input = <HALF_INPUT>;
-        exponent-tenths = <EXPONENT_TENTHS>;
-        track-remainders;
     };
 
     trackball_listener: trackball_listener {
