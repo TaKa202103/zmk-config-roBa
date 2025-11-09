@@ -65,10 +65,11 @@ motion_scaler_node: motion_scaler {
     };
 };
 
-trackball_listener {
-    status = "okay";
-    compatible = "zmk,input-listener";
-    device = <&trackball>;
-    input-processors = <&motion_scaler_node>;
+&{
+    trackball_listener: trackball_listener {
+        status = "okay";
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+        input-processors = <&motion_scaler_node>;
+    };
 };
-
