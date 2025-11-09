@@ -4,10 +4,6 @@
     col-offset = <6>;
 };
 
-&pointing_device {
-    processors = <&motion_scaler>;
-};
-
 motion_scaler: motion_scaler {
     compatible = "zmk,input-processor-motion-scaler";
     #input-processor-cells = <0>;
@@ -15,6 +11,10 @@ motion_scaler: motion_scaler {
     max-output = <300>;
     half-input = <50>;
     exponent-tenths = <20>;
+};
+
+&trackball {
+    processors = <&motion_scaler>;
 };
 
 &kscan0 {
@@ -25,15 +25,6 @@ motion_scaler: motion_scaler {
             , <&xiao_d 7 GPIO_ACTIVE_HIGH>
             , <&gpio0 10 GPIO_ACTIVE_HIGH>
             ;
-};
-
-/ {
-    trackball_listener {
-        status = "okay";
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-        input-processors = <&motion_scaler>;
-    };
 };
 
 &pinctrl {
@@ -73,3 +64,11 @@ motion_scaler: motion_scaler {
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
     };
 };
+
+trackball_listener {
+    status = "okay";
+    compatible = "zmk,input-listener";
+    device = <&trackball>;
+    input-processors = <&motion_scaler>;
+};
+
