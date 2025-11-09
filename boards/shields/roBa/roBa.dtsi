@@ -137,10 +137,10 @@
 };
 
 &spi0 {
-    status = "disabled";
+    status = "okay";
 
     trackball: trackball@0 {
-        status = "disabled";
+        status = "okay";
         reg = <0>;
     };
 };
