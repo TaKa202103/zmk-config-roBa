@@ -16,8 +16,7 @@
     tapping-term-ms = <180>;
 };
 
-&mkp_input_listener { input-processors = <&zip_temp_layer 4 1000>; 
-};
+&mkp_input_listener { input-processors = <&zip_temp_layer 4 1000>; };
 
 #define DEFAULT 0
 #define FUNCTION 1
@@ -35,7 +34,7 @@
 &trackball_listener {
     compatible = "zmk,input-listener";
     device = <&trackball>;
-    input-processors = < 
+    input-processors = <
         &zip_report_rate_limit 15
     >;
 
@@ -181,6 +180,11 @@
         Mute2 {
             bindings = <&kp C_MUTE>;
             key-positions = <28 29>;
+        };
+
+        HENKAN {
+            bindings = <&kp INT_HENKAN>;
+            key-positions = <26 25>;
         };
     };
 
