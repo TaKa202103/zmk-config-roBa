@@ -117,11 +117,6 @@
             key-positions = <20 21>;
         };
 
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
-        };
-
         at_sign {
             bindings = <&kp AT_SIGN>;
             key-positions = <10 11>;
