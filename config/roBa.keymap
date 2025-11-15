@@ -22,7 +22,7 @@
 #define FUNCTION 1
 #define NUM 2
 #define ARROW 3
-#define MOUSE 4
+#define SCROLLER 4
 #define MACRO 5
 #define BLUETOOTH 6
 
@@ -39,13 +39,13 @@
     >;
 
     auto-mouse-layer {
-        layers = <0 4>;
+        layers = <0 3>;
         input-processors = <&zip_temp_layer 4 3000>;
         process-next;
     };
 
     scroller {
-        layers = <3>;
+        layers = <4>;
         input-processors =
             <&zip_report_rate_limit 15>,
             <&zip_xy_scaler 1 30>,
