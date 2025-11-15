@@ -33,7 +33,7 @@
 
 &trackball_listener {
     compatible = "zmk,input-listener";
-    device = <&trackball>;p
+    device = <&trackball>;
     input-processors = <
         &zip_report_rate_limit 15
     >;
@@ -57,7 +57,9 @@
 
     ARROW {
         layers = <2>;
-        input-processors = <&zip_keybind_keys_custom>;
+        input-processors = 
+            <&zip_xy_scaler 1 3>,   
+            <&zip_xy_scaler 1 4>;
         process-next;
     };
 
@@ -95,11 +97,6 @@
             threshold = <0>;
             max_threshold = <10>;
             max_pending_activations = <5>;
-        };
-
-        zip_snipe: zip_snipe {
-            compatible = "zmk,input-processor-behavior";
-            behavior = <&pmw3610_snipe>;
         };
     };
 
