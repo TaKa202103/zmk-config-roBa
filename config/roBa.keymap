@@ -57,8 +57,11 @@
 
     ARROW {
         layers = <2>;
-        input-processors = <&zip_xy_scaler 1 3>, <&zip_keybind_keys_custom>;
-
+        input-processors = <
+            &pmw3610_snipe
+            &zip_xy_scaler 1 3
+            &zip_keybind_keys_custom
+        >;
         process-next;
     };
 
