@@ -16,8 +16,7 @@
     tapping-term-ms = <180>;
 };
 
-&mkp_input_listener { input-processors = <&zip_temp_layer 4 1000>; 
-};
+&mkp_input_listener { input-processors = <&zip_temp_layer 4 1000>; };
 
 #define DEFAULT 0
 #define FUNCTION 1
@@ -35,7 +34,7 @@
 &trackball_listener {
     compatible = "zmk,input-listener";
     device = <&trackball>;
-    input-processors = < 
+    input-processors = <
         &zip_report_rate_limit 15
     >;
 
@@ -69,7 +68,6 @@
         process-next;
     };
 };
-
 
 / {
     input_processors {
@@ -578,10 +576,10 @@
 
         FUNCTION {
             bindings = <
-&kp EXCLAMATION             &kp QUESTION  &kp AMPERSAND  &kp LEFT_BRACKET      &kp RIGHT_BRACKET                                &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp EQUAL  &kp TILDE  &kp PIPE
-&mt LEFT_SHIFT AT_SIGN      &kp HASH      &kp DOLLAR     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER        &kp F11  &kp F6          &kp F7           &kp F8     &kp F9     &kp F10
-&mt LEFT_CONTROL BACKSLASH  &kp SLASH     &kp PRCNT      &kp CARET             &kp COLON              &kp INT_YEN      &kp F8   &kp F1          &kp F2           &kp F3     &kp F4     &kp F5
-&kp LEFT_CONTROL            &kp LEFT_WIN  &kp LEFT_ALT   &trans                &trans                 &trans           &trans   &trans                                                 &kp F12
+&kp EXCLAMATION             &kp QUESTION  &kp AMPERSAND  &kp LEFT_BRACKET      &kp RIGHT_BRACKET                                &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp EQUAL  &kp APOS  &kp PIPE
+&mt LEFT_SHIFT AT_SIGN      &kp HASH      &kp DOLLAR     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER        &kp F11  &kp F6          &kp F7           &kp F8     &kp F9    &kp F10
+&mt LEFT_CONTROL BACKSLASH  &kp SLASH     &kp PRCNT      &kp CARET             &kp COLON              &kp INT_YEN      &kp F8   &kp F1          &kp F2           &kp F3     &kp F4    &kp F5
+&kp LEFT_CONTROL            &kp LEFT_WIN  &kp LEFT_ALT   &trans                &trans                 &trans           &trans   &trans                                                &kp F12
             >;
 
             sensor-bindings = <&inc_dec_kp LC(TAB) LC(LS(TAB))>;
