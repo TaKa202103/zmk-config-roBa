@@ -33,6 +33,8 @@
 
 &trackball_listener {
     compatible = "zmk,input-listener";
+    device = <&trackball>;
+
     input-processors = <
         &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT)
         &zip_report_rate_limit 15
