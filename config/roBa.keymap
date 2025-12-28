@@ -41,6 +41,7 @@
 
     /* ===== デフォルト（常に通る） ===== */
     passthrough {
+　　　　layers = <0 4>;
         process-next;
     };
 
