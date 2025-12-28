@@ -9,6 +9,9 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <input/processors/xy_scaler.dtsi>
+#include <input/processors/xy_transform.dtsi>
+#include <input/processors/xy_to_scroll_mapper.dtsi>
 
 &mt {
     flavor = "balanced";
@@ -38,12 +41,6 @@
     input-processors = <
         &zip_report_rate_limit 15
     >;
-
-    /* ===== デフォルト（常に通る） ===== */
-    passthrough {
-        layers = <0 4>;
-        process-next;
-    };
 
     auto-mouse-layer {
         layers = <0 4>;
