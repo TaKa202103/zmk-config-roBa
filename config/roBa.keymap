@@ -15,7 +15,7 @@
     tapping-term-ms = <180>;
 };
 
-&mkp_input_listener { input-processors = <&temp_layer 4 1000>; };
+&mkp_input_listener { input-processors = <&zip_temp_layer 4 1000>; };
 
 #define DEFAULT 0
 #define FUNCTION 1
@@ -36,7 +36,7 @@
 
     auto-mouse-layer {
         layers = <0 4>;
-        input-processors = <&temp_layer 4 3000>;
+        input-processors = <&zip_temp_layer 4 3000>;
         process-next;
     };
 
