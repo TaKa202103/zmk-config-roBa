@@ -8,6 +8,8 @@ manifest:
       url-base: https://github.com/zettaface
     - name: petejohanson
       url-base: https://github.com/petejohanson
+    - name: badjeff
+      url-base: https://github.com/badjeff
 
   projects:
     # https://github.com/zmkfirmware/zmk
