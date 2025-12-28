@@ -38,7 +38,11 @@
     input-processors = <
         &zip_report_rate_limit 15
     >;
-    process-next;
+
+    /* ===== デフォルト（常に通る） ===== */
+    passthrough {
+        process-next;
+    };
 
     auto-mouse-layer {
         layers = <0 4>;
