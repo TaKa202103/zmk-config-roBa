@@ -41,7 +41,7 @@
 
     /* ===== デフォルト（常に通る） ===== */
     passthrough {
-　　　　layers = <0 4>;
+        layers = <0 4>;
         process-next;
     };
 
@@ -68,7 +68,6 @@
             &zip_xy_scaler 1 3    
             &zip_keybind_keys_custom
         >;
-
         process-next;
     };
 
