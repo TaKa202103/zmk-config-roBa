@@ -33,8 +33,6 @@
 &trackball_listener {
     compatible = "zmk,input-listener";
     device = <&trackball>;
-    input-processors = <
-        &report_rate_limit 15
     >;
 
     auto-mouse-layer {
@@ -46,7 +44,6 @@
     scroller {
         layers = <3>;
         input-processors =
-            <&report_rate_limit 15>,
             <&xy_scaler 1 30>,
             <&xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&xy_to_scroll_mapper>;
