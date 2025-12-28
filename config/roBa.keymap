@@ -15,7 +15,7 @@
     tapping-term-ms = <180>;
 };
 
-&mkp_input_listener { input-processors = <&zip_temp_layer 4 1000>; };
+&mkp_input_listener { input-processors = <&temp_layer 4 1000>; };
 
 #define DEFAULT 0
 #define FUNCTION 1
@@ -34,7 +34,7 @@
     compatible = "zmk,input-listener";
     device = <&trackball>;
     input-processors = <
-        &report_rate_limit 15
+        &rate_limit 15
     >;
 
     auto-mouse-layer {
@@ -46,7 +46,7 @@
     scroller {
         layers = <3>;
         input-processors =
-            <&report_rate_limit 15>,
+            <&rate_limit 15>,
             <&xy_scaler 1 30>,
             <&xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&xy_to_scroll_mapper>;
