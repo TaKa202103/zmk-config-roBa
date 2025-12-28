@@ -14,13 +14,10 @@ manifest:
   projects:
     # https://github.com/zmkfirmware/zmk
     - name: zmk
-    #  remote: zmkfirmware
-    #  revision: main
-    #  import: app/west.yml
-      remote: petejohanson
-      revision: core/move-to-zephyr-4-1
-      import:
-        file: app/west.yml
+      remote: zmkfirmware
+      revision: main
+      import: app/west.yml
+
     
     # https://github.com/badjeff/zmk-input-processor-report-rate-limit
     - name: zmk-input-processor-report-rate-limit
