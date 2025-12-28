@@ -6,6 +6,8 @@ manifest:
       url-base: https://github.com/ssbb
     - name: zettaface
       url-base: https://github.com/zettaface
+    - name: petejohanson
+      url-base: https://github.com/petejohanson
 
   projects:
     # https://github.com/zmkfirmware/zmk
@@ -13,6 +15,10 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+      remote: petejohanson
+      revision: core/move-to-zephyr-4-1
+      import:
+        file: app/west.yml
 
     # https://github.com/ssbb/zmk-listeners
     - name: zmk-listeners
@@ -22,6 +28,11 @@ manifest:
     - name: zmk-input-processor-keybind
       remote: zettaface
       revision: main
+
+    - name: zmk-pmw3610-driver
+      remote: badjeff
+      revision: main
+      path: modules/zmk-pmw3610-driver-badjeff
 
   self:
     path: config
