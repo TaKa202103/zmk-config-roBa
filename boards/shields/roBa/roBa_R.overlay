@@ -62,6 +62,6 @@
         smart-mode;
         res-cpi = <800>;
         // invert-x;
-        invert-y;
+        // invert-y;
     };
 };
