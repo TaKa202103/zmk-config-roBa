@@ -181,6 +181,11 @@
             bindings = <&kp INT_HENKAN>;
             key-positions = <26 25>;
         };
+
+        Alt+Down {
+            bindings = <&kp LA(DOWN)>;
+            key-positions = <18>;
+        };
     };
 
     macros {
