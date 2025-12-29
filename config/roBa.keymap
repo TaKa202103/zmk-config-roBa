@@ -48,9 +48,8 @@
         layers = <3>;
         input-processors = <
             &zip_xy_scaler 1 (-4)
-            &zip_y_to_scroll_mapper
+            &zip_xy_to_scroll_mapper
         >;
-
         process-next;
     };
 
