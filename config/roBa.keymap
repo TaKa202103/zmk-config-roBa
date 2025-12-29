@@ -49,7 +49,7 @@
         input-processors = <
             &zip_input_transform INPUT_TRANSFORM_INVERT_X
             &zip_input_transform INPUT_TRANSFORM_INVERT_Y
-            &zip_xy_scaler 1 4
+            &zip_xy_scaler 1 1
             &zip_xy_to_scroll_mapper
         >;
 
@@ -71,7 +71,7 @@
         input-processors = <
             &zip_input_transform INPUT_TRANSFORM_DISABLE_Y
             &zip_input_transform INPUT_TRANSFORM_INVERT_X
-            &zip_xY_scaler 1 4
+            &zip_xY_scaler 0 1
             &zip_xy_to_scroll_mapper
         >;
 
