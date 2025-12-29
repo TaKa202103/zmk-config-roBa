@@ -40,6 +40,7 @@
         input-processors = <
             &zip_temp_layer 4 5000
         >;
+
         process-next;
     };
 
@@ -48,6 +49,7 @@
         input-processors = <
             &zip_xy_scaler 1 2
         >;
+
         process-next;
     };
 
@@ -57,6 +59,7 @@
             &zip_xy_scaler 1 8 
             &zip_keybind_keys_custom
         >;
+
         process-next;
     };
 
@@ -66,6 +69,7 @@
             &zip_xy_to_scroll_mapper
             &zip_x_scaler 1 4
         >;
+
         process-next;
     };
 };
@@ -530,6 +534,17 @@
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &exit_AML>;
             label = "KP_exit_AML";
+        };
+
+        AltDown: AltDown {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT &kp DOWN>,
+                <&macro_release>;
+
+            label = "ALTDOWN";
         };
     };
 
