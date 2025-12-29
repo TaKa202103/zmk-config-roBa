@@ -16,7 +16,7 @@
     tapping-term-ms = <180>;
 };
 
-&mkp_input_listener { input-processors = <&zip_temp_layer 4 1000>; };
+&mkp_input_listener { input-processors = <&zip_temp_layer 4 3000>; };
 
 #define DEFAULT 0
 #define FUNCTION 1
@@ -40,38 +40,34 @@
         input-processors = <
             &zip_temp_layer 4 5000
         >;
-
         process-next;
     };
 
     scroller {
         layers = <3>;
         input-processors = <
-            &zip_xy_scaler 1 2
+            &zip_xy_scaler 1 4
             &zip_xy_to_scroll_mapper
             &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT
         >;
-
         process-next;
     };
 
     ARROW {
         layers = <2>;
         input-processors = <
-            &zip_xy_scaler 1 4 
+            &zip_xy_scaler 1 8 
             &zip_keybind_keys_custom
         >;
-
         process-next;
     };
 
     MACRO {
         layers = <5>;
         input-processors = <
-            &zip_scroll_y_scaler 0 1
+            &zip_scroll_y_scaler 1 0
             &zip_xy_to_scroll_mapper
         >;
-
         process-next;
     };
 };
