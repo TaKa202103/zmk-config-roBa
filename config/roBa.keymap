@@ -50,6 +50,7 @@
             &zip_xy_scaler 1 (-4)
             &zip_xy_to_scroll_mapper
         >;
+
         process-next;
     };
 
@@ -164,20 +165,10 @@
 
         TeamsMute {
             bindings = <&kp LS(LC(M))>;
-            key-positions = <37 41>;
+            key-positions = <29 30>;
         };
 
         Mute {
-            bindings = <&kp C_MUTE>;
-            key-positions = <39 40>;
-        };
-
-        TeamsMute2 {
-            bindings = <&kp LS(LC(M))>;
-            key-positions = <33 32>;
-        };
-
-        Mute2 {
             bindings = <&kp C_MUTE>;
             key-positions = <28 29>;
         };
