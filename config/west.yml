@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: ssbb
       url-base: https://github.com/ssbb
+    - name: tyamanak
+      url-base: https://github.com/tyamanak
     - name: zettaface
       url-base: https://github.com/zettaface
     - name: petejohanson
@@ -17,7 +19,11 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    
+
+    - name: zmk-pmw3610-driver
+      remote: tyamanak
+      revision: main
+      
     # https://github.com/badjeff/zmk-pmw3610-driver
     - name: zmk-pmw3610-driver
       remote: badjeff
