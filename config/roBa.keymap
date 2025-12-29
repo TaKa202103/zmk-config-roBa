@@ -67,8 +67,8 @@
     MACRO {
         layers = <5>;
         input-processors = <
-            &zip_xy_scaler 1 4
-            &zip_x_to_scroll_mapper
+            &zip_x_scaler 1 4
+            &zip_xy_to_scroll_mapper
         >;
 
         process-next;
