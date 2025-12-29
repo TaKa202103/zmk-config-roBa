@@ -48,7 +48,6 @@
         layers = <3>;
         input-processors = <
             &zip_xy_scaler 1 2
-            &zip_report_rate_limit 15
         >;
 
         process-next;
@@ -59,7 +58,6 @@
         input-processors = <
             &zip_xy_scaler 1 4    
             &zip_keybind_keys_custom
-            &zip_report_rate_limit 15
         >;
 
         process-next;
