@@ -188,7 +188,7 @@
         };
 
         Alt+Down {
-            bindings = <&kp LA(DOWN)>;
+            bindings = <&AltDown>;
             key-positions = <18 19>;
         };
 
