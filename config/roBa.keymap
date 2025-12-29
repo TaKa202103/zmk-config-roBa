@@ -38,8 +38,7 @@
     auto_mouse_layer {
         layers = <0>;
         input-processors = <
-            &zip_temp_layer 4 3000
-            &zip_report_rate_limit 15
+            &zip_temp_layer 4 5000
         >;
         process-next;
     };
@@ -49,17 +48,15 @@
         input-processors = <
             &zip_xy_scaler 1 2
         >;
-
         process-next;
     };
 
     ARROW {
         layers = <2>;
         input-processors = <
-            &zip_xy_scaler 1 4    
+            &zip_xy_scaler 1 8 
             &zip_keybind_keys_custom
         >;
-
         process-next;
     };
 
