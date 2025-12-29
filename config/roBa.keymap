@@ -47,8 +47,7 @@
     scroller {
         layers = <3>;
         input-processors = <
-            &zip_input_transform INPUT_TRANSFORM_INVERT_X
-            &zip_input_transform INPUT_TRANSFORM_INVERT_Y
+            &zip_input_transform 3
             &zip_xy_scaler 1 1
             &zip_xy_to_scroll_mapper
         >;
@@ -69,8 +68,7 @@
     MACRO {
         layers = <5>;
         input-processors = <
-            &zip_input_transform INPUT_TRANSFORM_DISABLE_Y
-            &zip_input_transform INPUT_TRANSFORM_INVERT_X
+            &zip_input_transform 1
             &zip_xY_scaler 0 1
             &zip_xy_to_scroll_mapper
         >;
