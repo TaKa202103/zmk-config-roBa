@@ -38,7 +38,7 @@
     auto_mouse_layer {
         layers = <0>;
         input-processors = <&zip_temp_layer 4 3000
-                            &zip_xy_scaller 1 (-1)>;
+                            &zip_xy_scaler 1 (-1)>;
         process-next;
     };
 
