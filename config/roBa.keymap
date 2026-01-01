@@ -154,7 +154,7 @@
             key-positions = <22 23>;
         };
 
-        Alt {
+        AltDown {
             bindings = <&kp LA(DOWN_ARROW)>;
             key-positions = <18 19>;
         };
