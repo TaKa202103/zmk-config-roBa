@@ -205,6 +205,11 @@
             timeout-ms = <50>;
             require-prior-idle-ms = <50>;
         };
+
+        CtrlShingle {
+            bindings = <&kp LC(SINGLE_QUOTE)>;
+            key-positions = <25 24>;
+        };
     };
 
     macros {
