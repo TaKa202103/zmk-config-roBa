@@ -548,7 +548,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LA(DOWN) &kp DOWN>,
+                <&kp LA(LEFT_ALT) &kp DOWN>,
                 <&macro_release>;
 
             label = "ALTDOWN";
