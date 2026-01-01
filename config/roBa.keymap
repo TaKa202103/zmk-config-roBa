@@ -203,6 +203,18 @@
             bindings = <&kp LC(KP_PLUS)>;
             key-positions = <20 19>;
         };
+
+        altdown {
+            bindings = <&AltDown>;
+            key-positions = <6 7>;
+        };
+
+        altdown2 {
+            bindings = <&kp LA(DOWN_ARROW)>;
+            key-positions = <5 6>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <50>;
+        };
     };
 
     macros {
