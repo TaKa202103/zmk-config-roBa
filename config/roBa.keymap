@@ -194,24 +194,14 @@
             key-positions = <26 25>;
         };
 
-        Alt+Down {
-            bindings = <&kp LA(DOWN)>;
-            key-positions = <18 19>;
-        };
-
         Ctrl+Plus {
             bindings = <&kp LC(KP_PLUS)>;
             key-positions = <20 19>;
         };
 
-        altdown {
-            bindings = <&AltDown>;
-            key-positions = <6 7>;
-        };
-
-        altdown2 {
+        AltDown {
             bindings = <&kp LA(DOWN_ARROW)>;
-            key-positions = <5 6>;
+            key-positions = <18 19>;
             timeout-ms = <50>;
             require-prior-idle-ms = <50>;
         };
@@ -553,17 +543,6 @@
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &exit_AML>;
             label = "KP_exit_AML";
-        };
-
-        AltDown: AltDown {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LA(LEFT_ALT) &kp DOWN>,
-                <&macro_release>;
-
-            label = "ALTDOWN";
         };
     };
 
