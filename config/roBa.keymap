@@ -1,6 +1,7 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 50
 
 #include <input/processors.dtsi>
+#include <behaviors/input_gestures_accel.dtsi>
 #include <input/processors/report_rate_limit.dtsi>
 #include <input/processors/zmk-input-processor-keybind.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
