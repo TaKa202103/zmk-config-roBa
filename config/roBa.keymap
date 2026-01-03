@@ -44,9 +44,9 @@
 
 &trackball_listener {
     compatible = "zmk,input-listener";
-　　input-processors = <
-            &zip_report_rate_limit 15
-        >;
+    input-processors = <
+        &zip_report_rate_limit 15
+    >;
 
     auto_mouse_layer {
         layers = <0>;
