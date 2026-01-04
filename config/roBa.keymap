@@ -30,6 +30,10 @@
 
 &mkp_input_listener { input-processors = <&zip_temp_layer 4 3000>; };
 
+&trackball {
+    cpi = <500>;
+    invert-x;
+
 #define DEFAULT 0
 #define FUNCTION 1
 #define NUM 2
@@ -43,9 +47,23 @@
     excluded-positions = <10 17 18 19 22 30 31 34>;
 };
 
+&zip_scroll_snap {
+    x-threshold = <5 8>;
+    y-threshold = <8 5>;
+
+    require-n-samples = <8>;
+    immediate-snap-threshold = <750>;
+    lock-duration-ms = <175>;
+    lock-for-next-n-events = <8>;
+    idle-reset-timeout-ms = <175>;
+};
+
 &trackball_listener {
     compatible = "zmk,input-listener";
     device = <&trackball>;
+     input-processors = <
+        &zip_report_rate_limit 15
+    >;
 
     auto_mouse_layer {
         layers = <0>;
@@ -53,7 +71,6 @@
             &zip_temp_layer 4 5000
             &pointer_accel
         >;
-
         process-next;
     };
 
@@ -64,8 +81,8 @@
             &zip_xy_to_scroll_mapper
             &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT
             &zip_scroll_snap
+            &zip_report_rate_limit 15
         >;
-
         process-next;
     };
 
@@ -75,7 +92,6 @@
             &zip_xy_scaler 1 8 
             &zip_keybind_keys_custom
         >;
-
         process-next;
     };
 
