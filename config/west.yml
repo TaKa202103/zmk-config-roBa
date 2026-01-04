@@ -12,6 +12,8 @@ manifest:
       url-base: https://github.com/badjeff
     - name: oleksandrmaslov
       url-base: https://github.com/oleksandrmaslov    
+    - name: kot149
+      url-base: https://github.com/kot149
 
   projects:
     # https://github.com/zmkfirmware/zmk
@@ -46,5 +48,10 @@ manifest:
       remote: oleksandrmaslov
       revision: main
 
+    - name: zmk-scroll-snap
+      remote: kot149
+      revision: v1
+      path: modules/zmk-scroll-snap
+      
   self:
     path: config
