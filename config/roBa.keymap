@@ -33,6 +33,7 @@
 &trackball {
     cpi = <500>;
     invert-x;
+};
 
 #define DEFAULT 0
 #define FUNCTION 1
@@ -100,7 +101,6 @@
         input-processors = <
             &zip_xy_scaler 1 4
         >;
-
         process-next;
     };
 };
