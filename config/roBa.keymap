@@ -31,7 +31,7 @@
 &mkp_input_listener { input-processors = <&zip_temp_layer 4 3000>; };
 
 &trackball {
-    res-cpi = <600>;
+    cpi = <600>;
     invert-x;
 };
 
