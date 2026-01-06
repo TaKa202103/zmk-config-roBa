@@ -31,7 +31,7 @@
 &mkp_input_listener { input-processors = <&zip_temp_layer 4 3000>; };
 
 &trackball {
-    cpi = <500>;
+    res-cpi = <600>;
     invert-x;
 };
 
@@ -63,7 +63,7 @@
     compatible = "zmk,input-listener";
     device = <&trackball>;
      input-processors = <
-        &zip_report_rate_limit 15
+        &zip_report_rate_limit 20
     >;
 
     auto_mouse_layer {
@@ -82,7 +82,7 @@
             &zip_xy_to_scroll_mapper
             &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT
             &zip_scroll_snap
-            &zip_report_rate_limit 15
+            &zip_report_rate_limit 20
         >;
         process-next;
     };
