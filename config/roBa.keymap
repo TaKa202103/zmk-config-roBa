@@ -581,6 +581,13 @@
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &exit_AML>;
             label = "KP_exit_AML";
         };
+
+        clounch: clounch {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp MB2 &mkp MB2 &mkp MB2>;
+            label = "CLOUNCH";
+        };
     };
 
     behaviors {
