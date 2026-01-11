@@ -242,6 +242,11 @@
             bindings = <&kp LC(KP_PLUS)>;
             key-positions = <20 19>;
         };
+
+        clounch {
+            bindings = <&clounch>;
+            key-positions = <7 8>;
+        };
     };
 
     macros {
