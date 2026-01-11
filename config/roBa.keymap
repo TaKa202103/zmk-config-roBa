@@ -672,7 +672,7 @@
 
         NUM {
             bindings = <
-&kp MINUS               &mkp MB2      &kp LC(F1)        &ataiharituke         &kp PLUS                                                                      &kp PLUS      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
+&kp MINUS               &mkp MB2      &kp LC(F1)        &ataiharituke         &kp PLUS                                                                      &kp PLUS      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_MINUS
 &mt LEFT_SHIFT SLASH    &kp F2        &shift_ctrl_up    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LC(LA(KP_NUMBER_0))      &kp LS(LA(MINUS))         &kp ASTERISK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH
 &mt LEFT_CONTROL COMMA  &kp F4        &shift_ctrl_down  &shift_ctrl_left      &shift_ctrl_right      &kp PERIOD                   &kp EQUAL                 &kp N0        &kp N1        &kp NUMBER_2  &kp NUMBER_3  &Doubl_00
 &kp LEFT_CONTROL        &kp LEFT_WIN  &kp LEFT_ALT      &trans                &trans                 &trans                       &mt LEFT_SHIFT BACKSPACE  &kp ENTER                                               &kp COMMA
@@ -718,7 +718,7 @@
 &trans        &trans        &trans        &trans  &trans  &trans      &trans          &trans                                                  &NewPass
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(LS(MINUS)) LC(PLUS)>;
+            sensor-bindings = <&inc_dec_kp LC(LS(KP_MINUS)) LC(LS(KP_PLUS))>;
         };
     };
 };
