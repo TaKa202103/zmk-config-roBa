@@ -591,6 +591,20 @@
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &exit_AML>;
             label = "KP_exit_AML";
         };
+
+        streamdeck: streamdeck {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LA(LEFT_ALT)>,
+                <&macro_tap>,
+                <&kp S>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "STREAMDECK";
+        };
     };
 
     behaviors {
