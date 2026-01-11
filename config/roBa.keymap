@@ -677,7 +677,7 @@
 &kp LEFT_CONTROL    &kp LEFT_WIN            &kp LEFT_ALT    &trans                   &trans          &trans            &Win_left    &Win_right                                                                   &kp LA(F4)
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(LS(KP_PLUS)) LC(LS(SEMICOLON))>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         MOUSE {
@@ -705,6 +705,8 @@
 &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader     &trans        &trans        &trans        &trans        &KAOname
 &trans        &trans        &trans        &trans        &trans  &trans      &trans          &trans                                                  &NewPass
             >;
+
+            sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LS(LC(KP_MINUS))>;
         };
     };
 };
