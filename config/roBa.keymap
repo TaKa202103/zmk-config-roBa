@@ -249,7 +249,7 @@
         };
 
         streamdeck {
-            bindings = <&kp LA(LC(S))>;
+            bindings = <&kp LA(S)>;
             key-positions = <22 23>;
         };
     };
