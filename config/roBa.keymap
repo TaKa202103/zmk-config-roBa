@@ -711,7 +711,7 @@
 &trans        &trans        &trans        &trans  &trans  &trans      &trans          &trans                                                  &NewPass
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LS(LC(KP_MINUS))>;
+            sensor-bindings = <&inc_dec_kp LC(LS(KP_PLUS)) LS(LC(KP_MINUS))>;
         };
     };
 };
