@@ -68,7 +68,7 @@
     auto_mouse_layer {
         layers = <0>;
         input-processors = <
-            &zip_temp_layer 4 3000
+            &zip_temp_layer 4 1000
             &pointer_accel
         >;
 
