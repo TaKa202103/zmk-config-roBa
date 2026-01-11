@@ -42,10 +42,10 @@
 #define MOUSE 4
 #define MACRO 5
 #define BLUETOOTH 6
-
+j
 &zip_temp_layer {
     require-prior-idle-ms = <200>;
-    excluded-positions = <18 19 20 31 32>;
+    excluded-positions = <17 18 19 30 31>;
 };
 
 &zip_scroll_snap {
