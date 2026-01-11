@@ -249,7 +249,7 @@
         };
 
         streamdeck {
-            bindings = <&kp LA(S)>;
+            bindings = <&streamdeck>;
             key-positions = <22 23>;
         };
     };
