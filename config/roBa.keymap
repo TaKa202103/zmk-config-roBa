@@ -243,11 +243,6 @@
             key-positions = <20 19>;
         };
 
-        clounch {
-            bindings = <&mkp MB3>;
-            key-positions = <7 8>;
-        };
-
         streamdeck {
             bindings = <&kp LA(S)>;
             key-positions = <9 8>;
