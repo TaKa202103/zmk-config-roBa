@@ -62,7 +62,7 @@
     compatible = "zmk,input-listener";
     device = <&trackball>;
     input-processors = <
-        &zip_report_rate_limit 20
+        &zip_report_rate_limit 15
     >;
 
     auto_mouse_layer {
@@ -71,7 +71,6 @@
             &zip_temp_layer 4 1000
             &pointer_accel
         >;
-
         process-next;
     };
 
@@ -82,9 +81,8 @@
             &zip_xy_to_scroll_mapper
             &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT
             &zip_scroll_snap
-            &zip_report_rate_limit 20
+            &zip_report_rate_limit 15
         >;
-
         process-next;
     };
 
@@ -94,7 +92,6 @@
             &zip_xy_scaler 1 8 
             &zip_keybind_keys_custom
         >;
-
         process-next;
     };
 
@@ -103,7 +100,6 @@
         input-processors = <
             &zip_xy_scaler 1 4
         >;
-
         process-next;
     };
 };
