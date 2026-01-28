@@ -270,7 +270,7 @@
             bindings =
                 <&macro_tap>,
                 <&none &kp SPACE>,
-                <&macro_wait_time 500>,
+                <&macro_wait_time 150>,
                 <&kp BACKSPACE &kp DOLLAR &kp LS(Y) &kp U &kp R &kp I &kp HASH &kp NUMBER_1 &kp N0 &kp N0 &kp NUMBER_3 &kp ENTER>,
                 <&macro_release>;
 
