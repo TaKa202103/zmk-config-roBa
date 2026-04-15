@@ -3,7 +3,6 @@
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <behaviors/input_gestures_accel.dtsi>
-#include <input/processors/report_rate_limit.dtsi>
 #include <input/processors/zmk-input-processor-keybind.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 #include <scroll-snap.dtsi>
@@ -82,7 +81,6 @@
             &zip_xy_to_scroll_mapper
             &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT
             &zip_scroll_snap
-            &zip_report_rate_limit 15
         >;
 
         process-next;
