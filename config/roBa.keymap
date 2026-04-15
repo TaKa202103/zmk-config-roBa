@@ -71,8 +71,8 @@
     scroller {
         layers = <3>;
         input-processors = <
-            &zip_xy_scaler 1 8
             &zip_xy_to_scroll_mapper
+            &zip_xy_scaler 1 8
             &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT
             &zip_scroll_snap
         >;
@@ -102,9 +102,7 @@
         compatible = "zmk,input-listener";
         status = "okay";
         device = <&trackball>;
-        input-processors = <
-            &pointer_accel      // Acceleration processor
-        >;
+        input-processors = <>;
     };
 };
 
