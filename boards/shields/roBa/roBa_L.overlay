@@ -15,10 +15,6 @@
     status = "disabled";
 };
 
-&pointing {
-    status = "disabled";
-};
-
 &left_encoder {
     status = "okay";
 };
