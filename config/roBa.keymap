@@ -52,7 +52,6 @@
 
 &trackball_listener {
     compatible = "zmk,input-listener";
-    device = <&trackball>;
 
     auto_mouse_layer {
         layers = <0>;
