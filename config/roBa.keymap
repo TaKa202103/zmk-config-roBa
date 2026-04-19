@@ -20,11 +20,11 @@
 &pointer_accel {
     input-type = <INPUT_EV_REL>;  // For relative input devices
     track-remainders;             // Accumulate fractional movements
-    min-factor = <400>;          // 0.8x at very slow speeds
+    min-factor = <300>;          // 0.8x at very slow speeds
     max-factor = <3000>;         // 3.0x at fast speeds
-    speed-threshold = <1200>;     // 1200 counts/sec for 1x
-    speed-max = <6000>;          // 6000 counts/sec for max accel
-    acceleration-exponent = <2>;  // Quadratic acceleration curve
+    speed-threshold = <1500>;     // 1200 counts/sec for 1x
+    speed-max = <4000>;          // 6000 counts/sec for max accel
+    acceleration-exponent = <1>;  // Quadratic acceleration curve
 };
 
 #define DEFAULT 0
@@ -36,7 +36,7 @@
 #define BLUETOOTH 6
 
 &zip_temp_layer {
-    require-prior-idle-ms = <200>;
+    require-prior-idle-ms = <350>;
     excluded-positions = <5 6 7 8 17 18 19 20 30 31>;
 };
 
