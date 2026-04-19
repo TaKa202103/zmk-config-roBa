@@ -27,6 +27,12 @@ manifest:
       remote: badjeff
       revision: main
       path: modules/zmk-pmw3610-driver-badjeff
+
+    - name: zmk-input-processor-report-rate-limit
+      remote: badjeff
+      revision: main
+      path: modules/zmk-input-processor-report-rate-limit
+
       
     # https://github.com/ssbb/zmk-listeners
     - name: zmk-listeners
