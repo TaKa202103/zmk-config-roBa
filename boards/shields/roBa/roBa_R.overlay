@@ -14,19 +14,18 @@
             ;
 };
 
-/ {
-    trackball_listener {
-        status = "okay";
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-    };
+&trackball {
+    cpi = <600>;
+    invert-x;
 };
 
-/ {
-    pointing {
-        compatible = "zmk,pointing";
-        status = "okay";
-    };
+&trackball_listener {
+    status = "okay";
+    device = <&trackball>;
+};
+
+&pointing {
+    status = "okay";
 };
 
 &pinctrl {
