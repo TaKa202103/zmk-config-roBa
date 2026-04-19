@@ -66,11 +66,3 @@
     status = "okay";
     device = <&trackball>;
 };
-
-&pointing {
-    status = "okay";
-};
-
-&xiao_serial {
-    status = "disabled";
-};
