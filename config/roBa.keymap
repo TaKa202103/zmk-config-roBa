@@ -97,13 +97,6 @@
     };
 };
 
-/ {
-    tpad0: tpad0 {
-        compatible = "zmk,input-listener";
-        status = "okay";
-        device = <&trackball>;
-    };
-};
 
 / {
     input_processors {
@@ -233,14 +226,12 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "TO_LAYER_0";
         };
 
         KAOname: KAOname {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp KP_NUMBER_3 &kp KP_NUMBER_2 &kp KP_NUMBER_5 &kp KP_NUMBER_6 &kp KP_NUMBER_1 &kp KP_NUMBER_1 &kp TAB>;
-            label = "KAONAME";
         };
 
         NewPass: NewPass {
@@ -262,7 +253,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp KP_NUMBER_0 &kp KP_NUMBER_0>;
-            label = "DOUBL_00";
         };
 
         Win_right: Win_right {
@@ -276,8 +266,6 @@
                 <&kp RIGHT>,
                 <&macro_release>,
                 <&kp LEFT_WIN &kp RIGHT>;
-
-            label = "WIN_RIGHT";
         };
 
         Win_left: Win_left {
@@ -291,8 +279,6 @@
                 <&kp LEFT>,
                 <&macro_release>,
                 <&kp LEFT_WIN &kp LEFT>;
-
-            label = "WIN_LEFT";
         };
 
         Printscreen: Printscreen {
@@ -306,8 +292,6 @@
                 <&kp PRINTSCREEN>,
                 <&macro_release>,
                 <&kp LEFT_ALT &kp PRINTSCREEN>;
-
-            label = "PRINTSCREEN";
         };
 
         Win_up: Win_up {
@@ -321,8 +305,6 @@
                 <&kp UP_ARROW>,
                 <&macro_release>,
                 <&kp LEFT_WIN &kp UP_ARROW>;
-
-            label = "WIN_UP";
         };
 
         Win_down: Win_down {
@@ -336,148 +318,126 @@
                 <&kp DOWN_ARROW>,
                 <&macro_release>,
                 <&kp LEFT_WIN &kp DOWN_ARROW>;
-
-            label = "WIN_DOWN";
         };
 
         Alt1: Alt1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LEFT_ALT &kp NUMBER_1>;
-            label = "ALT1";
         };
 
         Alt2: Alt2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LEFT_ALT &kp NUMBER_2>;
-            label = "ALT2";
         };
 
         Alt3: Alt3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LEFT_ALT &kp NUMBER_3>;
-            label = "ALT3";
         };
 
         Alt4: Alt4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LEFT_ALT &kp NUMBER_4>;
-            label = "ALT4";
         };
 
         Alt5: Alt5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LEFT_ALT &kp NUMBER_5>;
-            label = "ALT5";
         };
 
         Alt6: Alt6 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LEFT_ALT &kp NUMBER_6>;
-            label = "ALT6";
         };
 
         Alt7: Alt7 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LEFT_ALT &kp NUMBER_7>;
-            label = "ALT7";
         };
 
         Alt8: Alt8 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LEFT_ALT &kp NUMBER_8>;
-            label = "ALT8";
         };
 
         Alt9: Alt9 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LEFT_ALT &kp NUMBER_9>;
-            label = "ALT9";
         };
 
         Alt00: Alt00 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LEFT_ALT &kp NUMBER_0 &kp NUMBER_0>;
-            label = "ALT00";
         };
 
         Alt09: Alt09 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LEFT_ALT &kp NUMBER_0 &kp NUMBER_9>;
-            label = "ALT09";
         };
 
         Alt08: Alt08 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LEFT_ALT &kp NUMBER_0 &kp NUMBER_8>;
-            label = "ALT08";
         };
 
         Alt07: Alt07 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LEFT_ALT &kp NUMBER_0 &kp NUMBER_7>;
-            label = "ALT07";
         };
 
         Alt06: Alt06 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LEFT_ALT &kp NUMBER_0 &kp NUMBER_6>;
-            label = "ALT06";
         };
 
         Alt05: Alt05 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LEFT_ALT &kp NUMBER_0 &kp NUMBER_5>;
-            label = "ALT05";
         };
 
         Alt04: Alt04 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LEFT_ALT &kp NUMBER_0 &kp NUMBER_4>;
-            label = "ALT04";
         };
 
         Alt03: Alt03 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LEFT_ALT &kp NUMBER_0 &kp NUMBER_3>;
-            label = "ALT03";
         };
 
         Alt02: Alt02 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LEFT_ALT &kp NUMBER_0 &kp NUMBER_2>;
-            label = "ALT02";
         };
 
         Alt01: Alt01 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LEFT_ALT &kp NUMBER_0 &kp NUMBER_1>;
-            label = "ALT01";
         };
 
         ataiharituke: ataiharituke {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LEFT_ALT &kp H &kp V &kp V>;
-            label = "ATAIHARITUKE";
         };
 
         shift_ctrl_right: shift_ctrl_right {
@@ -490,8 +450,6 @@
                 <&kp RIGHT_ARROW>,
                 <&macro_release>,
                 <&kp LEFT_SHIFT &kp LEFT_CONTROL>;
-
-            label = "SHIFT_CTRL_RIGHT";
         };
 
         shift_ctrl_left: shift_ctrl_left {
@@ -504,8 +462,6 @@
                 <&kp LEFT_ARROW>,
                 <&macro_release>,
                 <&kp LEFT_SHIFT &kp LEFT_CONTROL>;
-
-            label = "SHIFT_CTRL_LEFT";
         };
 
         shift_ctrl_up: shift_ctrl_up {
@@ -518,8 +474,6 @@
                 <&kp UP_ARROW>,
                 <&macro_release>,
                 <&kp LEFT_SHIFT &kp LEFT_CONTROL>;
-
-            label = "SHIFT_CTRL_UP";
         };
 
         shift_ctrl_down: shift_ctrl_down {
@@ -532,8 +486,6 @@
                 <&kp DOWN_ARROW>,
                 <&macro_release>,
                 <&kp LEFT_SHIFT &kp LEFT_CONTROL>;
-
-            label = "SHIFT_CTRL_DOWN";
         };
 
         new_folder: new_folder {
@@ -546,8 +498,6 @@
                 <&kp N>,
                 <&macro_release>,
                 <&kp LEFT_CONTROL &kp LEFT_SHIFT>;
-
-            label = "NEW_FOLDER";
         };
 
         exit_AML: exit_AML {
@@ -556,7 +506,6 @@
             tap-ms = <0>;
             #binding-cells = <0>;
             bindings = <&tog_off MOUSE>;
-            label = "exit_AML";
         };
 
         kp_exit_AML: kp_exit_AML {
@@ -565,7 +514,6 @@
             tap-ms = <0>;
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &exit_AML>;
-            label = "KP_exit_AML";
         };
 
         streamdeck: streamdeck {
@@ -578,8 +526,6 @@
                 <&kp S>,
                 <&macro_release>,
                 <&kp LEFT_ALT>;
-
-            label = "STREAMDECK";
         };
 
         ctrl_tab: ctrl_tab {
@@ -592,8 +538,6 @@
                 <&kp TAB>,
                 <&macro_release>,
                 <&kp LEFT_CONTROL>;
-
-            label = "CTRL_TAB";
         };
 
         ctrl_shift_tab: ctrl_shift_tab {
@@ -606,8 +550,6 @@
                 <&kp TAB>,
                 <&macro_release>,
                 <&kp LEFT_CONTROL &kp LEFT_SHIFT>;
-
-            label = "CTRL_SHIFT_TAB";
         };
     };
 
@@ -616,7 +558,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
             bindings = <&mo>, <&to_layer_0>;
-
             #binding-cells = <2>;
             tapping-term-ms = <180>;
         };
@@ -626,7 +567,6 @@
             label = "ENCODER_ MSC_UP_DOWN";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-
             tap-ms = <60>;
         };
 
