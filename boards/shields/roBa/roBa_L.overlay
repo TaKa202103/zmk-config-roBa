@@ -11,6 +11,10 @@
             ;
 };
 
+&trackball_listener {
+    device = <&trackball>;
+};
+
 &left_encoder {
     status = "okay";
 };
