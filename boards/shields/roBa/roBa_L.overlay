@@ -12,7 +12,11 @@
 };
 
 &trackball_listener {
-    device = <&trackball>;
+    status = "disabled";
+};
+
+&pointing {
+    status = "disabled";
 };
 
 &left_encoder {
