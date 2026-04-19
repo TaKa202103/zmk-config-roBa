@@ -6,3 +6,8 @@ url: https://github.com/kumamuk-git/zmk-config-roBa
 requires: [xiao_ble//zmk]
 features:
   - keys
+  - pointer
+  - encoder
+siblings:
+  - roBa_L
+  - roBa_R
