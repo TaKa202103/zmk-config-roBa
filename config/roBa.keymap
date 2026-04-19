@@ -27,11 +27,6 @@
     acceleration-exponent = <2>;  // Quadratic acceleration curve
 };
 
-&trackball {
-    cpi = <600>;
-    invert-x;
-};
-
 #define DEFAULT 0
 #define FUNCTION 1
 #define NUM 2
