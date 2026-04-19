@@ -1,4 +1,11 @@
 #include "roBa.dtsi"
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+
+/ {
+    chosen {
+        zmk,pointing-device = &trackball_listener;
+    };
+};
 
 &default_transform {
     col-offset = <6>;
@@ -12,20 +19,6 @@
             , <&xiao_d 7 GPIO_ACTIVE_HIGH>
             , <&gpio0 10 GPIO_ACTIVE_HIGH>
             ;
-};
-
-&trackball {
-    cpi = <600>;
-    invert-x;
-};
-
-&trackball_listener {
-    status = "okay";
-    device = <&trackball>;
-};
-
-&pointing {
-    status = "okay";
 };
 
 &pinctrl {
@@ -68,5 +61,20 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
+　　    cpi = <600>;
+   　　 invert-x;
     };
+};
+
+&trackball_listener {
+    status = "okay";
+    device = <&trackball>;
+};
+
+&pointing {
+    status = "okay";
+};
+
+&xiao_serial {
+    status = "disabled";
 };
