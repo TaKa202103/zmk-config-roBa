@@ -63,6 +63,7 @@
         y-input-code = <INPUT_REL_Y>;
         cpi = <600>;
         invert-x;
+        poll-interval-ms = <30>; 
     };
 };
 
