@@ -4,12 +4,10 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: ssbb
       url-base: https://github.com/ssbb
-    - name: zettaface
-      url-base: https://github.com/zettaface
-    - name: petejohanson
-      url-base: https://github.com/petejohanson
     - name: badjeff
       url-base: https://github.com/badjeff
+    - name: zettaface
+      url-base: https://github.com/zettafacej
     - name: kot149
       url-base: https://github.com/kot149
 
