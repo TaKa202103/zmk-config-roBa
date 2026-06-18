@@ -21,16 +21,6 @@
             ;
 };
 
-&pointer_accel {
-    input-type = <INPUT_EV_REL>;  // For relative input devices
-    track-remainders;             // Accumulate fractional movements
-    min-factor = <300>;          // 0.8x at very slow speeds
-    max-factor = <3000>;         // 3.0x at fast speeds
-    speed-threshold = <1500>;     // 1200 counts/sec for 1x
-    speed-max = <4000>;          // 6000 counts/sec for max accel
-    acceleration-exponent = <1>;  // Quadratic acceleration curve
-};
-
 &zip_temp_layer {
     require-prior-idle-ms = <350>;
     excluded-positions = <5 6 7 8 17 18 19 20 30 31>;
@@ -93,33 +83,24 @@
 
 &trackball_listener {
     status = "okay";
+    compatible = "zmk,input-listener";
     device = <&trackball>;
 
     auto_mouse_layer {
         layers = <0>;
         input-processors = <
             &zip_temp_layer 4 10000
-            &pointer_accel
         >;
         process-next;
     };
 
     scroller {
-        layers = <3>;
+        layers = <7>;
         input-processors = <
             &zip_xy_to_scroll_mapper
             &zip_xy_scaler 1 8
             &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT
             &zip_scroll_snap
-        >;
-        process-next;
-    };
-
-    ARROW {
-        layers = <2>;
-        input-processors = <
-            &zip_xy_scaler 1 8 
-            &zip_keybind_keys_custom
         >;
         process-next;
     };
