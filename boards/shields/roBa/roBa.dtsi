@@ -125,5 +125,5 @@
 };
 
 &spi0 {
-    status = "disabled";
+    status = "okay";
 };
