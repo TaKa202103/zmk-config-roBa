@@ -12,10 +12,18 @@
 #include <dt-bindings/zmk/pointing.h>
 
 &mt {
-    flavor = "balanced";
-    quick-tap-ms = <0>;
     tapping-term-ms = <180>;
+    quick-tap-ms = <250>;
+    flavor = "balanced";
 };
+
+&lt {
+    tapping-term-ms = <180>;
+    quick-tap-ms = <250>;
+    flavor = "balanced";
+};
+
+&mkp_input_listener { input-processors = <&zip_temp_layer 4 250>; };
 
 #define DEFAULT 0
 #define FUNCTION 1
@@ -24,45 +32,9 @@
 #define MOUSE 4
 #define MACRO 5
 #define BLUETOOTH 6
+#define SCROLL 7
 
 / {
-    input_processors {
-        zip_keybind_keys_custom: zip_keybind_keys {
-            compatible = "zmk,input-processor-keybind";
-            #input-processor-cells = <0>;
-            track_remainders;
-            bindings =
-                <&kp RIGHT_ARROW>,
-                <&kp LEFT_ARROW>,
-                <&kp UP_ARROW>,
-                <&kp DOWN_ARROW>;
-
-            tick = <4>;
-            wait-ms = <10>;
-            tap-ms = <20>;
-            mode = <1>;
-            threshold = <0>;
-            max_threshold = <10>;
-            max_pending_activations = <5>;
-        };
-
-        zip_scroll_x_scaler: zip_scroll_x_scaler {
-            compatible = "zmk,input-processor-scaler";
-            #input-processor-cells = <2>;
-            type = <INPUT_EV_REL>;
-            codes = <INPUT_REL_HWHEEL>;
-            track-remainders;
-        };
-
-        zip_scroll_y_scaler: zip_scroll_y_scaler {
-            compatible = "zmk,input-processor-scaler";
-            #input-processor-cells = <2>;
-            type = <INPUT_EV_REL>;
-            codes = <INPUT_REL_WHEEL>;
-            track-remainders;
-        };
-    };
-
     combos {
         compatible = "zmk,combos";
 
