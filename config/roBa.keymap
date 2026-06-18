@@ -403,7 +403,7 @@
             wait-ms = <0>;
             tap-ms = <0>;
             #binding-cells = <0>;
-            bindings = <&tog_off MOUSE>;
+            bindings = <&tog_off 5>;
         };
 
         kp_exit_AML: kp_exit_AML {
@@ -495,9 +495,9 @@
         DEFAULT {
             bindings = <
 &mt ESC Q           &kp W         &kp E         &kp R                          &kp T                                                                             &kp Y                   &kp U  &kp I      &kp O    &lt 7 P
-&mt LEFT_SHIFT A    &kp S         &kp D         &lt 4 F                        &mt LEFT_ALT G          &kp LS(LG(S))                              &kp MINUS      &kp H                   &kp J  &kp K      &kp L    &lt 6 SQT
+&mt LEFT_SHIFT A    &kp S         &kp D         &lt 5 F                        &mt LEFT_ALT G          &kp LS(LG(S))                              &kp MINUS      &kp H                   &kp J  &kp K      &kp L    &lt 4 SQT
 &mt LEFT_CONTROL Z  &kp X         &kp C         &kp V                          &kp B                   &mt TILDE UNDER                            &kp SEMICOLON  &kp N                   &kp M  &kp COMMA  &kp DOT  &mt LEFT_SHIFT SLASH
-&kp LEFT_CONTROL    &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 5 INT_MUHENKAN  &lt_to_layer_0 2 SPACE  &lt_to_layer_0 3 INT_KATAKANAHIRAGANA      &kp BACKSPACE  &lt_to_layer_0 1 ENTER                             &kp DEL
+&kp LEFT_CONTROL    &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_MUHENKAN  &lt_to_layer_0 2 SPACE  &lt_to_layer_0 3 INT_KATAKANAHIRAGANA      &kp BACKSPACE  &lt_to_layer_0 1 ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&encoder_msc_up_down>;
@@ -536,6 +536,17 @@
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
+        BLUETOOTH {
+            bindings = <
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans                              &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans        &trans        &trans        &trans  &trans  &trans      &bt BT_CLR_ALL  &bt BT_CLR    &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans  &trans  &trans      &bootloader     &trans        &trans        &trans        &trans        &KAOname
+&trans        &trans        &trans        &trans  &trans  &trans      &trans          &trans                                                  &NewPass
+            >;
+
+            sensor-bindings = <&inc_dec_kp LC(LS(KP_MINUS)) LC(LS(KP_PLUS))>;
+        };
+
         MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &kp LS(LG(D))       &kp LS(LC(TAB))  &kp LC(TAB)  &mkp MB3  &trans
@@ -552,17 +563,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &Alt05  &Alt04  &Alt8  &Alt09  &Alt9  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &Alt03  &Alt02                        &trans
             >;
-        };
-
-        BLUETOOTH {
-            bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans                              &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans        &trans        &trans        &trans  &trans  &trans      &bt BT_CLR_ALL  &bt BT_CLR    &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans  &trans  &trans      &bootloader     &trans        &trans        &trans        &trans        &KAOname
-&trans        &trans        &trans        &trans  &trans  &trans      &trans          &trans                                                  &NewPass
-            >;
-
-            sensor-bindings = <&inc_dec_kp LC(LS(KP_MINUS)) LC(LS(KP_PLUS))>;
         };
 
         SCROLL {
