@@ -27,7 +27,6 @@
 
 / {
     input_processors {
-
         zip_keybind_keys_custom: zip_keybind_keys {
             compatible = "zmk,input-processor-keybind";
             #input-processor-cells = <0>;
@@ -485,6 +484,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
             bindings = <&mo>, <&to_layer_0>;
+
             #binding-cells = <2>;
             tapping-term-ms = <180>;
         };
@@ -494,6 +494,7 @@
             label = "ENCODER_ MSC_UP_DOWN";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+
             tap-ms = <60>;
         };
 
@@ -521,7 +522,7 @@
 
         DEFAULT {
             bindings = <
-&mt ESC Q           &kp W         &kp E         &kp R                          &kp T                                                                             &kp Y                   &kp U  &kp I      &kp O    &lt 3 P
+&mt ESC Q           &kp W         &kp E         &kp R                          &kp T                                                                             &kp Y                   &kp U  &kp I      &kp O    &lt 7 P
 &mt LEFT_SHIFT A    &kp S         &kp D         &lt 4 F                        &mt LEFT_ALT G          &kp LS(LG(S))                              &kp MINUS      &kp H                   &kp J  &kp K      &kp L    &lt 6 SQT
 &mt LEFT_CONTROL Z  &kp X         &kp C         &kp V                          &kp B                   &mt TILDE UNDER                            &kp SEMICOLON  &kp N                   &kp M  &kp COMMA  &kp DOT  &mt LEFT_SHIFT SLASH
 &kp LEFT_CONTROL    &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 5 INT_MUHENKAN  &lt_to_layer_0 2 SPACE  &lt_to_layer_0 3 INT_KATAKANAHIRAGANA      &kp BACKSPACE  &lt_to_layer_0 1 ENTER                             &kp DEL
@@ -590,6 +591,15 @@
             >;
 
             sensor-bindings = <&inc_dec_kp LC(LS(KP_MINUS)) LC(LS(KP_PLUS))>;
+        };
+
+        SCROLL {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
         };
     };
 };
